@@ -4,4 +4,4 @@ students
 The team members are:
 - Christos Gregoriou
 - Michalis Georgiou
-- Philipos Georgiadis
+- Philippos Georgiades

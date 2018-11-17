@@ -25,4 +25,13 @@ display:block;
   text-decoration:none;
 }
 
-
+.collapsible-menu label {
+font-family:'SansSerif',cursive;
+  font-size:26px;
+  display:block;
+  cursor:pointer;
+  padding:10px 0 10px 50px;
+}
+input#menu{
+  display:none;
+}

@@ -1,0 +1,37 @@
+.menu-content{
+  max-height:0;
+  overflow:hidden;
+  font-family: 'Verdana' , sans serif;
+  padding: 0 0 0 50px;
+
+}
+input:checked ~ .menu-content{
+max-height:100%;
+}
+.collapsible-menu{
+  backgroup-color:rgb(255, 255, 255);
+  padding:0px 25px;
+  border-bottom: 3px solid gold;
+  box-shadow:1px 2px 3px rgb(0,0,0,0.2);
+}
+
+.collapsible-menu ul{
+  list-style-type:none;
+  padding:0;
+}
+.collapsible-menu a{
+display:block;
+  padding:10px;
+  text-decoration:none;
+}
+
+.collapsible-menu label {
+font-family:'SansSerif',cursive;
+  font-size:26px;
+  display:block;
+  cursor:pointer;
+  padding:10px 0 10px 50px;
+}
+input#menu{
+  display:none;
+}

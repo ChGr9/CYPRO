@@ -1,3 +1,11 @@
 .menu-content{
-font-family: 'Verdana' , sans serif
+  max-height:0;
+  overflow:hidden;
+  font-family: 'Verdana' , sans serif;
+  padding: 0 0 0 50;
+
 }
+
+.collapsible-menu{
+}
+

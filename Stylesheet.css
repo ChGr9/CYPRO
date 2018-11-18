@@ -35,3 +35,11 @@ font-family:'SansSerif',cursive;
 input#menu{
   display:none;
 }
+
+#teamname {
+  display: inline-block;
+}
+
+#treasurehuntist {
+  display: none;
+}

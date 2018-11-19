@@ -36,10 +36,34 @@ input#menu{
   display:none;
 }
 
-#teamname {
-  display: inline-block;
-}
-
 #treasurehuntist {
   display: none;
+}
+
+#login {
+  display: none;
+}
+
+#loginusername {
+  font-weight: bold;
+  margin-bottom: 0;
+  position: center;
+}
+
+#teamname {
+  width: 60%;
+  padding: 1% 2%;
+  margin: 1% 0;
+  display: inline-block;
+  border: 1px solid #aaaaaa;
+  position: center;
+}
+
+#teamnamesubmit {
+  background-color: #4caf50;
+  color: white;
+  padding: 1% 2%;
+  margin: 1% 0;
+  width: 60%;
+  cursor: pointer;
 }

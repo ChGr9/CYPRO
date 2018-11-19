@@ -14,3 +14,10 @@ Assigned tasks for design for each one of us
 - Christos Gregoriou: Web-App design
 - Michalis Georgiou: Landing page design
 - Philippos Georgiades: Web-App design
+
+## Meeting 3 Mon 19/11:
+Reviewed progress on previous tasks
+Changed tasks to:
+-Christos Gregoriou: js code
+-Michalis Georgiou: Design
+-Philippos Georgiades: Design

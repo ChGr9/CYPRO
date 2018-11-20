@@ -40,7 +40,14 @@ input#menu{
 input:checked +label{
 background-image:url("cancel.png");
 }
-
+#Score{
+position: relative;
+ bottom:40px; 
+}
+.skip{
+position: relative;
+  
+}
 #treasurehuntist {
   display: none;
 }

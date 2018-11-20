@@ -1,3 +1,10 @@
+#Title{
+text-align:center;
+  font-family:Arial,Helvetica, sans-serif;
+  text-decoration:underline;
+  border-style:solid;
+}
+
 .menu-content{
   max-height:0;
   overflow:hidden;

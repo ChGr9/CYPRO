@@ -21,3 +21,6 @@ Changed tasks to:
 -Christos Gregoriou: js code
 -Michalis Georgiou: Design
 -Philippos Georgiades: Design
+
+## Meeting 4 Wed 21/11
+Reviewed progress and changed the design

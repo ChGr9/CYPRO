@@ -18,9 +18,9 @@ Assigned tasks for design for each one of us
 ## Meeting 3 Mon 19/11:
 Reviewed progress on previous tasks
 Changed tasks to:
--Christos Gregoriou: js code
--Michalis Georgiou: Design
--Philippos Georgiades: Design
+- Christos Gregoriou: js code
+- Michalis Georgiou: Design
+- Philippos Georgiades: Design
 
 ## Meeting 4 Wed 21/11
 Reviewed progress and changed the design

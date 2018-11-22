@@ -63,13 +63,14 @@ function loginsubmit(){
         xhttp.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200){
                 let object = JSON.parse(this.responseText);
-                if (object.status == "OK"){
+                console.log(object);
+                if (object.status === "OK"){
                     messages.innerHTML = "";
                     session = object.session;
                     displayQuestions();
                 }
-                else if (object.status == "ERROR"){
-                    messages.innerHTML = object.errorMessages[1];
+                else if (object.status === "ERROR"){
+                    messages.innerHTML = object.errorMessages[0];
                 }
             }
             else {

@@ -63,5 +63,12 @@ header a:hover{
 
 #showcase{
     min-height: 400px;
-    background:url("DNA.jpg");
+    background: url("DNA1.jpg") 0 -1000px no-repeat;
+    background-size: auto;
+    text-align:center;
+    color: #ffffff;
+}
+#showcase p{
+    font-weight: bold;
+    color: #ffffff;
 }

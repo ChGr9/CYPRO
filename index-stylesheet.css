@@ -4,3 +4,9 @@ body{
     margin:0;
     background-color: #f4f4f4;
 }
+/*Global*/
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden; /*if something goes outside of div it will be hidden*/
+}

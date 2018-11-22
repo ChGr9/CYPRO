@@ -25,3 +25,14 @@ header a{
     text-transform: uppercase;
     font-size: 16px;
 }
+
+header ul{
+margin:0;
+padding:0;
+}
+
+header li{
+    float:left;
+    display:inline;
+    padding:0 20px 0 20px;     /*top right bottom left*/
+}

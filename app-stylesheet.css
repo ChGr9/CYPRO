@@ -1,88 +1,143 @@
-#Title{
-text-align:center;
-  font-family:Arial,Helvetica, sans-serif;
-  text-decoration:underline;
-  border-style:solid;
+body{
+    font: 15px/1.5 Arial,Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+    background-color: #f4f4f4;
+}
+/* Global */
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden; /*if something goes outside of div it will be hidden*/
 }
 
-.menu-content{
-  max-height:0;
-  overflow:hidden;
-  font-family: 'Verdana' , sans serif;
-  padding: 0 0 0 50px;
+button{
+    color: #ffffff;
+    font-weight: bold;
+    background-color: lightslategrey;
 
 }
-input:checked ~ .menu-content{
-max-height:100%;
-}
-.collapsible-menu{
 
-  padding:0 25px;
-  border-bottom: 3px solid gold;
-  box-shadow:1px 2px 3px rgb(0,0,0.2);
+ul{
+    margin:0;
+    padding:0;
 }
 
-.collapsible-menu ul{
-  list-style-type:none;
-  padding:0;
-}
-.collapsible-menu a{
-display:block;
-  padding:10px;
-  text-decoration:none;
-}
-
-.collapsible-menu label {
-font-family:'SansSerif',cursive;
-  font-size:26px;
-  display:block;
-  cursor:pointer;
-  background:url("menu.png") no-repeat left center;
-  padding:10px 0 10px 50px;
-}
-input#menu{
-  display:none;
+/* Header */
+header{
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
 }
 
-input:checked +label{
-background-image:url("cancel.png");
-}
-#Score{
-position: relative;
- 
-}
-.skip{
-position: relative;
-  
-}
-#treasurehuntlistblock {
-  display: none;
+header a{
+    color:#ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.5s;
 }
 
-#login {
-  display: none;
+header li{
+    float:left;
+    display:inline-block;
+    padding:0 20px 0 20px;     /*top right bottom left*/
+    border:2px solid #e8491d;
+    margin-right: 2px;
 }
 
-#loginusername {
-  font-weight: bold;
-  margin-bottom: 0;
-  position: center;
+header #branding{
+    float:left;
+
 }
 
-#teamname {
-  width: 60%;
-  padding: 1% 2%;
-  margin: 1% 0;
-  display: inline-block;
-  border: 1px solid #aaaaaa;
-  position: center;
+header #branding{
+    margin: -20px;
+    padding-left: 20px;
+}
+header nav{
+    float:right;
+    margin-top:10px;
 }
 
-#teamnamesubmit {
-  background-color: #4caf50;
-  color: white;
-  padding: 1% 2%;
-  margin: 1% 0;
-  width: 60%;
-  cursor: pointer;
+header .highlight, header .current a, section .highlight{
+    color:#e8491d;
+    font-weight:bold;
+}
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Showcase */
+
+#welcome {
+    padding-top: 40px;
+}
+
+#showcase{
+    min-height: 400px;
+    background: url("DNA1.jpg") 0 -1000px no-repeat;
+    background-size: auto;
+    text-align:center;
+    color: #ffffff;
+}
+
+#showcase h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+#showcase p{
+    font-size: 20px;
+    padding-top: 10px;
+}
+#login{
+    padding:50px;
+    color:white;
+    background:#35424a;
+}
+
+#login h1{
+    float: left;
+    color: #e8491d;
+}
+
+#login form{
+    float: left;
+    margin-top:25px;
+    margin-left: 15px;
+}
+
+#login input[type="text"]{
+    padding: 4px;
+    height: 10px;
+    width: 150px;
+}
+
+/*boxes*/
+#boxes{
+    margin-top:20px;
+}
+
+#boxes .box{
+    float:left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+#boxes .box img{
+    width:90px;
+}
+
+footer{
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    background-color:#e8491d;
+    text-align: center;
 }

@@ -24,3 +24,9 @@ Changed tasks to:
 
 ## Meeting 4 Wed 21/11
 Reviewed progress and changed the design
+
+## Meeting 5 Fri 23/11
+Tested index page and fixed it
+Gived new tasks to each member
+Solved questions
+Changed plans on the aproach we will take on making this project

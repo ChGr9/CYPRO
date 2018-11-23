@@ -54,10 +54,6 @@ function displayQuestions() {
 
 function loginsubmit(){
     let v = document.getElementById("teamname").value;
-    if (v==""){
-        messages.innerHTML = "Enter teamname";
-    }
-    else {
         messages.innerHTML = "";
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -79,7 +75,6 @@ function loginsubmit(){
         let requesturl = apiurl + "start?player=" +v +"&app=Team1&treasure-hunt-id=" + uuid.toString();
         xhttp.open("GET",requesturl,true);
         xhttp.send();
-    }
 }
 
 var session;

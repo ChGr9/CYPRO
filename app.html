@@ -4,64 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Line above: Was found in lecture CO1111-w07-lec-NetworkingAndProgrammableWeb.pptx -->
-    <title>CYPRO</title>
+    <title>Title</title>
     <link rel="stylesheet" href="app-stylesheet.css" type="text/css">
-
 </head>
 <body>
 <header>
     <div class="container">
         <div id="branding">
-            <h1><span class="highlight">[CYPRO] </span>Game Page</h1>
+            <h1><span class="highlight">[CYPRO] </span>Home Page</h1>
         </div>
         <nav>
             <ul>
                 <li class = "current"><a href="index.html">Home</a></li>
-                <li class = "current"><a href="leaderboard.html">Leaderboard</a></li>                           <!--ABOUT NEED TO ADD-->
+                <li class = "current"><a></a>About</li>                                 <!--ABOUT NEED TO ADD-->
                 <li class = "current"><a href="app.html">Game Page</a></li>
             </ul>
         </nav>
     </div>
 
 </header>
-
-<section id="showcase">
-    <div class="container">
-        <h2 id="welcome">EMPTY <span class="highlight">EMPTY</span></h2>    <!--Comments-->
+    <div id="Score">
+        <h3> Score: </h3>
     </div>
-</section>
-<section id="login">
-    <div class="container">
-        <h1>Developer code:</h1>
-        <form>
-            <input type="text" placeholder="Type Here...">
-            <button type="button" class="button_1">Enter</button>
-        </form>
-    </div>
-</section>
-
-<section id="boxes">
-    <div class="container">
-        <div class="box">
-            <img src="boss.png">
-            <h3>Michalis Georgiou</h3>
-            <p>Comments goes Here!</p>      <!--Comments-->
+    <button class="skip" type="button">
+        Skip
+    </button>
+    <div id="interface">
+        <div id="treasurehuntlistblock">
+            <ul id="treasurehuntlist">
+                <!-- this part will be populated via the javascript -->
+            </ul>
         </div>
-        <div class="box">
-            <img src="boss.png">
-            <h3>Georgiades Filippos</h3>
-            <p>Comments goes Here!</p>      <!--Comments-->
-        </div>
-        <div class="box">
-            <img src="boss.png">
-            <h3>Christos Gregoriou</h3>
-            <p>Comments goes Here!</p>      <!--Comments-->
+        <div id="login">
+            <h2>Login Form</h2>
+            <p id="loginteamname">Team name</p>
+            <form action="javascript:loginsubmit()">
+                <input id="teamname" type="text" placeholder="Enter Teamname">
+                <input type="submit">
+            </form>
         </div>
     </div>
-</section>
+    <div id="messages">
 
-<footer>
-    <p>WEB APP Design, Copyright &copy; 2018</p>
-</footer>
+    </div>
+    <script src="web-app-api.js"></script>
 </body>
 </html>

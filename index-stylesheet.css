@@ -11,6 +11,13 @@ body{
     overflow:hidden; /*if something goes outside of div it will be hidden*/
 }
 
+button{
+    color: #ffffff;
+    font-weight: bold;
+    background-color: lightslategrey;
+
+}
+
 ul{
     margin:0;
     padding:0;
@@ -30,20 +37,25 @@ header a{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
+    transition: 0.5s;
 }
 
 header li{
     float:left;
-    display:inline;
+    display:inline-block;
     padding:0 20px 0 20px;     /*top right bottom left*/
+    border:2px solid #e8491d;
+    margin-right: 2px;
 }
 
 header #branding{
     float:left;
+
 }
 
 header #branding{
-    margin:0;
+    margin: -20px;
+    padding-left: 20px;
 }
 header nav{
     float:right;
@@ -61,6 +73,10 @@ header a:hover{
 
 /* Showcase */
 
+#welcome {
+    padding-top: 40px;
+}
+
 #showcase{
     min-height: 400px;
     background: url("DNA1.jpg") 0 -1000px no-repeat;
@@ -77,6 +93,7 @@ margin-top:100px;
 }
 #showcase p{
     font-size: 20px;
+    padding-top: 10px;
 }
 #login{
     padding:50px;
@@ -86,6 +103,7 @@ margin-top:100px;
 
 #login h1{
     float: left;
+    color: #e8491d;
 }
 
 #login form{

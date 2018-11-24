@@ -7,11 +7,14 @@ function leaderboard() {
         if (this.readyState === 4 && this.status === 200) {
             let object = JSON.parse(this.responseText);
             for (let i = 0; i<object.leaderboard.length;i++) {
+                let tdranking = document.createElement("td");
                 let tdplayer = document.createElement("td");
                 let tdscore = document.createElement("td");
+                tdranking.innerHTML = i +1;
                 tdplayer.innerHTML = object.leaderboard[i].player;
                 tdscore.innerHTML = object.leaderboard[i].score;
                 let newtr = document.createElement("tr");
+                newtr.appendChild(tdranking);
                 newtr.appendChild(tdplayer);
                 newtr.appendChild(tdscore);
                 leaderboardtable.appendChild(newtr);

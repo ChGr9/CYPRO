@@ -2,6 +2,7 @@
   <dictionary name="micha">
     <words>
       <w>competitsion</w>
+      <w>currentmain</w>
       <w>cypro</w>
       <w>filippos</w>
       <w>georgiades</w>
@@ -9,7 +10,6 @@
       <w>gregoriou</w>
       <w>leaderboard</w>
       <w>michalis</w>
-      <w>pptx</w>
     </words>
   </dictionary>
 </component>

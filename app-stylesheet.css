@@ -37,7 +37,7 @@ header a{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
-    transition: 0.5s;
+    transition: 0.8s;
 }
 
 header li{
@@ -56,6 +56,7 @@ header #branding{
 header #branding{
     margin: -20px;
     padding-left: 20px;
+    padding-right: 20px;
 }
 header nav{
     float:right;
@@ -68,6 +69,15 @@ header .highlight, header .current a, section .highlight{
 }
 header a:hover{
     color: #cccccc;
+    font-weight: bold;
+}
+
+.currentmain{
+    color:#e8491d;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.8s;
     font-weight: bold;
 }
 

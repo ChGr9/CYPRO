@@ -31,7 +31,7 @@ function leaderboard() {
 
 function getTreasureHuntList() {
     let xhttp = new XMLHttpRequest();
-    var messages = document.getElementById("messages");
+    //var messages = document.getElementById("messages");
     let treasurehuntList = document.getElementById("treasurehuntlist");
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
@@ -43,7 +43,8 @@ function getTreasureHuntList() {
                 newli.addEventListener("click", displaylogin);
                 treasurehuntList.appendChild(newli);
             }
-            document.getElementById("treasurehuntlistblock").style.display = "block";
+            document.getElementById("welcome").style.display = "block";
+            treasurehuntList.style.display = "block;"
         }
         else {
             //TODO If response not received (error).

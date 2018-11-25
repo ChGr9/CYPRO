@@ -81,13 +81,14 @@ header a:hover{
 }
 
 /* Samples OPTIONS*/
-.sample {                                                       /*HIDDEN*/
-    padding-top:30px;
+.samples {                                                       /*HIDDEN*/
     display: none;
+    padding: 20px 130px 10px;
 }
 
-#showcase .sample li{
+#showcase .samples li{
     padding: 3px 10px 2px 10px;
+    margin-top: 20px;
     color:#ffffff;
     background-color: #35424a;
     font-weight:bold;
@@ -96,18 +97,19 @@ header a:hover{
     border: 2px solid #e8491d;
     list-style-type: none;
 }
-#showcase .sample li:hover{
+#showcase .samples li:hover{
     color: #e8491d;
     font-weight: bold;
     transition: 0.6s;
 }
-
-
+#showcase .sample{
+    padding: 5px 0 5px 0;
+}
 /* Showcase */
 
 #welcome {                                                      /*HIDDEN*/
     padding-top: 40px;
-    display: none;
+    display:none;
 }
 
 #showcase{

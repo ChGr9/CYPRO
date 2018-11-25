@@ -107,4 +107,3 @@ function loginsubmit(){
     xhttp.open("GET",requesturl,true);
     xhttp.send();
 }
-getTreasureHuntList();

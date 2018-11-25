@@ -155,7 +155,20 @@ footer {
 #leaderboard{
 width:100%;
 border-style:solid;
- }
+border-collapse:collapse;
+background:#34495e;
+color: #f3f3f3;    
+}
 tr{
 text-align:center;
+}
+td,th{
+padding:8px;
+}
+tr:nth-of-type(odd){
+background:#16a085;
+}
+th{
+background:#2c3e50;
+font-weight:bold;    
 }

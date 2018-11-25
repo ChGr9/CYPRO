@@ -151,3 +151,11 @@ footer {
     background-color: #e8491d;
     text-align: center;
 }
+
+#leaderboard{
+width:100%
+border-style:solid;
+ }
+tr{
+text-align:center;
+}

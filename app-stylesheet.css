@@ -86,7 +86,7 @@ header a:hover{
     display: none;
 }
 
-#showcase .sample a{
+#showcase .sample li{
     padding: 3px 10px 2px 10px;
     color:#ffffff;
     background-color: #35424a;
@@ -94,8 +94,9 @@ header a:hover{
     font-size: 20px;
     text-decoration: none;
     border: 2px solid #e8491d;
+    list-style-type: none;
 }
-#showcase .sample a:hover{
+#showcase .sample li:hover{
     color: #e8491d;
     font-weight: bold;
     transition: 0.6s;

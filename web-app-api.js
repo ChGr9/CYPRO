@@ -66,7 +66,10 @@ function getquestion() {
     xhttp.onreadystatechange = function () {
         if (this.readyState===4 && this.status === 200){
             let object = JSON.parse(this.responseText);
-            // needs some team decisions as what do show and what not
+            let questiontext = object.questionText;
+            let questiontype = object.questionType;
+            let currentquestionindex = object.questionQuestionIndex;
+            let numberofquestions = object.numOfQuestions;
         }
         else{
             //TODO If response not received (error).
@@ -93,7 +96,7 @@ function loginsubmit(){
                 messages.innerHTML = "";
                 var session;
                 session = object.session;
-                displayQuestions();
+                //displayQuestions();
             }
             else if (object.status === "ERROR"){
                 messages.innerHTML = object.errorMessages[0];

@@ -44,7 +44,7 @@ function getTreasureHuntList() {
                 newli.addEventListener("click", displaylogin);
                 treasurehuntList.appendChild(newli);
             }
-            document.getElementById("welcome").style.display = "block";
+            document.getElementById("welcome1").style.display = "block";
             treasurehuntList.style.display = "block";
         }
         else {

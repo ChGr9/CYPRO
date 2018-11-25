@@ -85,7 +85,7 @@ header a:hover{
 /* Messages for game box */
 #welcome1 {                                                      /*HIDDEN*/
     padding-top: 40px;
-    display:block;
+    display:none;
 }
 #welcome2 {                                                      /*HIDDEN*/
     padding-top: 40px;

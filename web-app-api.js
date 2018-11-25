@@ -40,11 +40,12 @@ function getTreasureHuntList() {
                 let newli = document.createElement("li");
                 newli.innerHTML = object.treasureHunts[i].name;
                 newli.id = object.treasureHunts[i].uuid;
+                newli.classList.add("sample");
                 newli.addEventListener("click", displaylogin);
                 treasurehuntList.appendChild(newli);
             }
             document.getElementById("welcome").style.display = "block";
-            treasurehuntList.style.display = "block;"
+            treasurehuntList.style.display = "block";
         }
         else {
             //TODO If response not received (error).

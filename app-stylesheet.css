@@ -4,9 +4,19 @@ body{
     margin:0;
     background-color: #f4f4f4;
 }
+.home{
+    background-color: #0e0e0e;
+    padding: 12px 25px 10px 93px;
+}
+
+.logo {
+    height: 67px;
+    position: absolute;
+}
+
 /* Global */
 .container{
-    width:80%;
+    width:92%;
     margin:auto;
     overflow:hidden; /*if something goes outside of div it will be hidden*/
 }
@@ -180,9 +190,10 @@ header a:hover{
 
 /* STEP 1 OPTIONS*/
 .samples {                                                       /*HIDDEN*/
-    padding: 20px 10px 10px 40px;
+    padding: 5px 0 5px 0;
     overflow: hidden;
-    width: 80%;
+    width: 85%;
+    transform: translate(10%,0%);
     display: none;
 }
 

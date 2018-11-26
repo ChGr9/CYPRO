@@ -12,10 +12,17 @@ body{
 }
 
 button{
-    color: #ffffff;
+    color: #35424a;
     font-weight: bold;
     background-color: lightslategrey;
+    padding: 3px 45px 2px 50px;
+    transition: 0.6s;
+}
 
+button:hover{
+    color:#e8491d;
+    transition: 0.5s;
+    font-weight: bold;
 }
 
 ul{
@@ -65,10 +72,13 @@ header nav{
 header .highlight, header .current a, section .highlight{
     color:#e8491d;
     font-weight:bold;
+    transition: 1.0s;
 }
+
 header a:hover{
-    color: #cccccc;
+    color: #ffffff;
     font-weight: bold;
+    transition: 0.6s;
 }
 
 .currentmain{
@@ -107,16 +117,18 @@ header a:hover{
 #login h1{
     float: left;
     color: #e8491d;
+    padding-left: 25%;
 }
 
 #login form{
     float: left;
-    margin-top:25px;
-    margin-left: 15px;
+    margin-top: 20px;
+    margin-left: 50px;
+
 }
 
 #login input[type="text"]{
-    padding: 4px;
+    padding: 5px;
     height: 10px;
     width: 150px;
 }
@@ -143,18 +155,21 @@ header a:hover{
 /* MESSAGES FOR GAME */
 /* STEP 1 */
 #welcome1 {                                                      /*HIDDEN*/
-    padding-top: 40px;
+    padding-top: 30px;
     display:none;
+    width: 100%;
 }
 /* STEP 2 */
 #welcome2 {                                                      /*HIDDEN*/
-    padding-top: 40px;
+    padding-top: 30px;
     display:none;
+    width: 100%;
 }
 /* STEP 2 */
 #welcome3 {                                                      /*HIDDEN*/
-    padding-top: 40px;
+    padding-top: 30px;
     display:none;
+    width: 100%;
 }
 
 
@@ -165,10 +180,10 @@ header a:hover{
 
 /* STEP 1 OPTIONS*/
 .samples {                                                       /*HIDDEN*/
-    display: none;
     padding: 20px 10px 10px 40px;
     overflow: hidden;
     width: 80%;
+    display: none;
 }
 
 #showcase .samples li{
@@ -181,6 +196,7 @@ header a:hover{
     text-decoration: none;
     border: 2px solid #e8491d;
     list-style-type: none;
+    transition: 0.8s;
 }
 #showcase .samples li:hover{
     color: #e8491d;

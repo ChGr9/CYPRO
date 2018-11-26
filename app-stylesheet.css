@@ -82,17 +82,7 @@ header a:hover{
 
 
 
-/* Messages for game box */
-/* STEP 1 */
-#welcome1 {                                                      /*HIDDEN*/
-    padding-top: 40px;
-    display:none;
-}
-/* STEP 2 */
-#welcome2 {                                                      /*HIDDEN*/
-    padding-top: 40px;
-    display:none;
-}
+
 /* Showcase */
 
 #showcase{
@@ -151,7 +141,31 @@ header a:hover{
     width:90px;
 }
 
-/* Samples OPTIONS*/
+
+
+
+/* MESSAGES FOR GAME */
+/* STEP 1 */
+#welcome1 {                                                      /*HIDDEN*/
+    padding-top: 40px;
+    display:none;
+}
+/* STEP 2 */
+#welcome2 {                                                      /*HIDDEN*/
+    padding-top: 40px;
+    display:none;
+}
+/* STEP 2 */
+#welcome3 {                                                      /*HIDDEN*/
+    padding-top: 40px;
+    display:block
+}
+
+
+
+
+
+/* GAME STEPS OPTIONS*/
 
 /* STEP 1 OPTIONS*/
 .samples {                                                       /*HIDDEN*/
@@ -184,10 +198,34 @@ header a:hover{
 .highlight{
     text-transform: uppercase;
 }
+
+
 /* Step 2 OPTIONS*/
-.form{                                                              /*HIDDEN*/
+.form2{                                                              /*HIDDEN*/
     display: none;
 }
+
+/* Step 3 OPTIONS*/
+.container2 {
+    width: 45%;
+    height: 55%;
+    margin: auto
+
+}
+.button{
+    float: left;
+    display: inline-block;
+    padding: 15px 65px 10px 60px;
+    border: 2px solid #e8491d;
+    margin-left: 2%;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+
 
 footer{
     padding: 10px;

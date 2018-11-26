@@ -98,10 +98,6 @@ header a:hover{
     padding-top: 10px;
 }
 
-#treasurehuntlist {
-    display: none;
-}
-
 #login{
     padding:50px;
     color:white;
@@ -158,7 +154,7 @@ header a:hover{
 /* STEP 2 */
 #welcome3 {                                                      /*HIDDEN*/
     padding-top: 40px;
-    display:block
+    display:none;
 }
 
 
@@ -199,9 +195,12 @@ header a:hover{
     text-transform: uppercase;
 }
 
+#treasurehuntlist {
+    display: none;
+}
 
 /* Step 2 OPTIONS*/
-.form2{                                                              /*HIDDEN*/
+#form2{                                                              /*HIDDEN*/
     display: none;
 }
 
@@ -212,6 +211,7 @@ header a:hover{
     margin: auto
 
 }
+
 .button{
     float: left;
     display: inline-block;
@@ -223,9 +223,13 @@ header a:hover{
     font-size: 15px;
 }
 
+#mcq {
+    display: none;
+}
 
-
-
+#questions {
+    display: none;
+}
 
 footer{
     padding: 10px;

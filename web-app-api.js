@@ -57,10 +57,11 @@ function getTreasureHuntList() {
 }
 
 function displaylogin(e){
-    var uuid;
     uuid = e.target.attributes.id.value;
-    document.getElementById("treasurehuntlistblock").style.display = "none";
-    document.getElementById("login").style.display = "block";
+    document.getElementById("treasurehuntlist").style.display = "none";
+    document.getElementById("welcome1").style.display = "none"
+    document.getElementById("form2").style.display = "block";
+    document.getElementById("welcome2").style.display = "block";
 }
 
 function getquestion() {
@@ -68,10 +69,23 @@ function getquestion() {
     xhttp.onreadystatechange = function () {
         if (this.readyState===4 && this.status === 200){
             let object = JSON.parse(this.responseText);
-            let questiontext = object.questionText;
             let questiontype = object.questionType;
-            let currentquestionindex = object.questionQuestionIndex;
-            let numberofquestions = object.numOfQuestions;
+            document.getElementById("questions").innerHTML = object.questionText;
+            if (questiontype == "BOOLEAN"){
+
+            }
+            else if (questiontype == "INTEGER"){
+
+            }
+            else if (questiontype == "NUMERIC"){
+
+            }
+            else if (questiontype == "MCQ"){
+
+            }
+            else if (questiontype == "TEXT"){
+
+            }
         }
         else{
             //TODO If response not received (error).
@@ -83,25 +97,26 @@ function getquestion() {
 }
 
 function displayQuestions() {
-    document.getElementById("login").style.display = "none";
-    //document.getElementById("...").style.display = "block";
+    document.getElementById("form2").style.display = "none";
+    document.getElementById("welcome2").style.display = "none";
+    document.getElementById("welcome3").style.display = "block";
+    document.getElementById("questions").style.display = "block";
+    getquestion();
 }
 
 function loginsubmit(){
     let v = document.getElementById("teamname").value;
-    messages.innerHTML = "";
+    //messages.innerHTML = "";
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200){
             let object = JSON.parse(this.responseText);
             if (object.status === "OK"){
-                messages.innerHTML = "";
-                var session;
                 session = object.session;
-                //displayQuestions();
+                displayQuestions();
             }
             else if (object.status === "ERROR"){
-                messages.innerHTML = object.errorMessages[0];
+                //messages.innerHTML = object.errorMessages[0];
             }
         }
         else {
@@ -112,3 +127,6 @@ function loginsubmit(){
     xhttp.open("GET",requesturl,true);
     xhttp.send();
 }
+
+var uuid;
+var session;

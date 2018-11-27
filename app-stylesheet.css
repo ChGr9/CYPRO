@@ -107,10 +107,12 @@ header a:hover{
 
 #showcase{
     min-height: 400px;
-    background: url("DNA1.jpg") 0 -1000px no-repeat;
-    background-size: auto;
-    text-align:center;
+    background: url(DNA1.jpg)-270px -220px;
+    position: initial;
+    background-size: 150%;
+    text-align: center;
     color: #ffffff;
+    transition: 10s;
 }
 
 #showcase p{
@@ -291,6 +293,16 @@ footer{
     .container{
         width: 100%;
     }
+    #showcase{
+        min-height: 400px;
+        background: url(DNA1.jpg)-2500px -719px;
+        position: initial;
+        background-size: 970%;
+        text-align: center;
+        color: #ffffff;
+        transition: 10s;
+    }
+
 }
 @media(max-width: 373px) {
     .container li, .container a {

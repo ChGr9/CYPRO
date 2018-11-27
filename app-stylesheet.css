@@ -256,6 +256,13 @@ header a:hover{
 #mcq {
     display: none;
 }
+#box {
+    display: none;
+}
+
+#tof {
+    display: none;
+}
 
 #questions {
     display: none;

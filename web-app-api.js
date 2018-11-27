@@ -50,7 +50,7 @@ function getTreasureHuntList() {
         else {
             //TODO If response not received (error).
         }
-    };
+    }
     let requesturl = apiurl + "list";
     xhttp.open("GET",requesturl, true);
     xhttp.send();
@@ -64,27 +64,102 @@ function displaylogin(e){
     document.getElementById("welcome2").style.display = "block";
 }
 
+function submitanswer(url) {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            let object = JSON.parse(this.responseText);
+            //messages.innerHTML = object.message;
+            if (object.correct == true){
+                getquestion();
+            }
+            getscore();
+        }
+        else {
+            //TODO If response not received (error).
+        }
+    }
+    xhttp.open("GET",url,true);
+    xhttp.send();
+}
+
+function lianswer(e) {
+    let answer = e.target.innerHTML;
+    let requesturl = apiurl + "answer?session=" + session + "&answer=" + answer.toString();
+    submitanswer(requesturl);
+}
+
+function inputboxanswer() {
+    let requesturl = apiurl + "answe?session=" + session + "&answer=" + document.getElementById("inputbox").innerHTML;
+    submitanswer(requesturl);
+}
+
+function linkanswers() {
+    let mcq = document.getElementById("mcq").getElementsByTagName("li");
+    for(let i =0; i<mcq.length;i++){
+        mcq[i].addEventListener("click", lianswer);
+    }
+    let tof = document.getElementById("tof").getElementsByTagName("li");
+    for (let i =0; i<tof.length;i++){
+        tof[i].addEventListener("click", lianswer);
+    }
+    getscore();
+    getquestion();
+}
+
+function getscore() {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200){
+            let object = JSON.parse(this.responseText);
+            //score.innerHTML = object.score;
+        }
+        else {
+            //TODO If response not received (error).
+        }
+    }
+}
+
 function getquestion() {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState===4 && this.status === 200){
             let object = JSON.parse(this.responseText);
-            let questiontype = object.questionType;
-            document.getElementById("questions").innerHTML = object.questionText;
-            if (questiontype == "BOOLEAN"){
-
+            if (object.completed == false) {
+                let questiontype = object.questionType;
+                document.getElementById("questions").innerHTML = object.questionText;
+                console.log(questiontype);
+                if (questiontype == "BOOLEAN") {
+                    document.getElementById("box").style.display = "none";
+                    document.getElementById("mcq").style.display = "none";
+                    document.getElementById("tof").style.display = "block"
+                }
+                else if (questiontype == "INTEGER") {
+                    document.getElementById("inputbox").setAttribute("type", "number");
+                    document.getElementById("box").style.display = "block";
+                    document.getElementById("mcq").style.display = "none";
+                    document.getElementById("tof").style.display = "none";
+                }
+                else if (questiontype == "NUMERIC") {
+                    document.getElementById("inputbox").setAttribute("type", "number");
+                    document.getElementById("box").style.display = "block";
+                    document.getElementById("mcq").style.display = "none";
+                    document.getElementById("tof").style.display = "none";
+                }
+                else if (questiontype == "MCQ") {
+                    document.getElementById("mcq").style.display = "block";
+                    document.getElementById("box").style.display = "none";
+                    document.getElementById("tof").style.display = "none";
+                }
+                else if (questiontype == "TEXT") {
+                    document.getElementById("inputbox").setAttribute("type", "text");
+                    document.getElementById("box").style.display = "block";
+                    document.getElementById("mcq").style.display = "none";
+                    document.getElementById("tof").style.display = "none";
+                }
             }
-            else if (questiontype == "INTEGER"){
-
-            }
-            else if (questiontype == "NUMERIC"){
-
-            }
-            else if (questiontype == "MCQ"){
-
-            }
-            else if (questiontype == "TEXT"){
-
+            else {
+                console.log("finished");
             }
         }
         else{
@@ -101,7 +176,7 @@ function displayQuestions() {
     document.getElementById("welcome2").style.display = "none";
     document.getElementById("welcome3").style.display = "block";
     document.getElementById("questions").style.display = "block";
-    getquestion();
+    linkanswers();
 }
 
 function loginsubmit(){

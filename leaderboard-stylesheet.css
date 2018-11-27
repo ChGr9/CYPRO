@@ -25,7 +25,7 @@ button{
     color: #35424a;
     font-weight: bold;
     background-color: lightslategrey;
-    padding: 3px 45px 2px 50px;
+    padding: 3px 43px 4px 50px;
     transition: 0.6s;
 }
 
@@ -139,7 +139,7 @@ header a:hover {
 #login form{
     float: left;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 77px;
 
 }
 
@@ -197,4 +197,27 @@ font-weight:bold;
 background:#2c3e50;
 color:white;
 margin-top:auto;    
+}
+
+
+/* Media Queries */
+@media(max-width: 768px){
+    #boxes .box,header nav,header #branding{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    .container li,.container a{
+        float: right;
+        font-size: 14px;
+    }
+    .container{
+        width: 100%;
+    }
+}
+@media(max-width: 373px) {
+    .container li, .container a {
+        float: left;
+        font-size: 14px;
+    }
 }

@@ -250,7 +250,7 @@ header a:hover{
 .container2 {
     width: 45%;
     height: 55%;
-    margin: auto
+    margin: auto;
 
 }
 
@@ -282,10 +282,22 @@ header a:hover{
 
 /*input type="text"*/
 .textanswer{
-    padding: 3px 0 5px 5pc
+    padding: 3px 0 5px 5pc;
+}
+.container3{
+    display:none;
 }
 
 /*input type="number"*/
+.numberanswer{
+    padding: 3px 0 5px 5pc;
+}
+.numberanswer::-webkit-inner-spin-button,::-webkit-outer-spin-button{
+    opacity: 1;
+    -webkit-appearance: button;
+    margin: 0;
+
+}
 
 footer{
     padding: 10px;

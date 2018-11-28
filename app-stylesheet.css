@@ -14,7 +14,10 @@ body{
     position: absolute;
 }
 
+/*-------------------------------------------------------------------------------------------------------------*/
+
 /* Global */
+
 .container{
     width:92%;
     margin:auto;
@@ -22,9 +25,9 @@ body{
 }
 
 button{
-    color: #35424a;
+    color: #000000;
     font-weight: bold;
-    background-color: lightslategrey;
+    background-color: #646c73e3;
     padding: 3px 45px 5px 50px;
     transition: 0.6s;
 }
@@ -40,7 +43,10 @@ ul{
     padding:0;
 }
 
+/*-------------------------------------------------------------------------------------------------------------*/
+
 /* Header */
+
 header{
     background: #35424a;
     color: #ffffff;
@@ -100,8 +106,7 @@ header a:hover{
     font-weight: bold;
 }
 
-
-
+/*-------------------------------------------------------------------------------------------------------------*/
 
 /* Showcase */
 
@@ -145,7 +150,10 @@ header a:hover{
     width: 150px;
 }
 
-/*boxes*/
+/*-------------------------------------------------------------------------------------------------------------*/
+
+/*Boxes*/
+
 #boxes{
     margin-top: 39px;
     padding-bottom: 2%;
@@ -162,10 +170,9 @@ header a:hover{
     width:90px;
 }
 
+/*-------------------------------------------------------------------------------------------------------------*/
 
-
-
-/* MESSAGES FOR GAME */
+/* MESSAGES FOR GAME OPTIONS */
 /* STEP 1 */
 #welcome1 {                                                      /*HIDDEN*/
     padding-top: 30px;
@@ -187,6 +194,7 @@ header a:hover{
 /* OPINION TITLE */
 .opinion{
     padding-right: 13%;
+    padding-top: 35px;
     margin-bottom: 0;
     color: #e8491d;
     font-size: 18px;
@@ -194,13 +202,12 @@ header a:hover{
     transition: 5s;
 }
 
-
-
-
+/*-------------------------------------------------------------------------------------------------------------*/
 
 /* GAME STEPS OPTIONS*/
 
 /* STEP 1 OPTIONS*/
+/*Choose Samples*/
 .samples {                                                       /*HIDDEN*/
     padding: 5px 0 5px 0;
     overflow: hidden;
@@ -237,16 +244,18 @@ header a:hover{
     text-transform: uppercase;
 }
 
-#treasurehuntlist {
+#treasurehuntlist {                                                   /*HIDDEN*/
     display: none;
 }
 
 /* Step 2 OPTIONS*/
+/*GIVE TEAM NAME*/
 #form2{                                                              /*HIDDEN*/
     display: none;
 }
 
 /* Step 3 OPTIONS*/
+/*CHOOSE A,B,C,D BUTTONS*/
 .container2 {
     width: 45%;
     height: 55%;
@@ -265,30 +274,36 @@ header a:hover{
     font-size: 15px;
 }
 
-#mcq {
+#mcq {                                                               /*HIDDEN*/
     display: none;
 }
-#box {
-    display: none;
-}
-
-#tof {
+#box {                                                               /*HIDDEN*/
     display: none;
 }
 
-#questions {
+#tof {                                                               /*HIDDEN*/
     display: none;
 }
-/* Step 5 */
-/*input type="text"*/
-.textanswer{
-    padding: 3px 0 5px 5pc;
+
+#questions {                                                         /*HIDDEN*/
+    display: none;
 }
-.container3{
+/* Step 4 */
+/*TEXT ANSWERS*/
+.container3{                                                         /*HIDDEN*/
     display:none;
 }
 
-/*input type="number"*/
+.textanswer{
+    padding: 3px 0 5px 5pc;
+}
+
+/* Step 5*/
+/*NUMERIC ANSWERS*/
+.container4{                                                          /*HIDDEN*/
+    display: none;
+}
+
 .numberanswer{
     padding: 3px 0 5px 5pc;
 }
@@ -298,6 +313,19 @@ header a:hover{
     margin: 0;
 }
 
+/* Step 6*/
+/*TRUE & FALSE*/
+.container5{
+    display: block;                                                   /*HIDDEN*/
+    padding: 2%;
+}
+
+.or{
+    margin: -10px 10px -4px 8px;
+    color: #00f1ff;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
 
 footer{
     padding: 10px;
@@ -307,8 +335,10 @@ footer{
     text-align: center;
 }
 
+/*-------------------------------------------------------------------------------------------------------------*/
 
 /* Media Queries */
+
 @media(max-width: 777px){
 #boxes .box,header nav,header #branding{
     float: none;
@@ -333,6 +363,7 @@ footer{
     }
     .opinion{
         padding-right: 27%;
+        padding-top: 35px;
         margin-bottom: 0;
         color: #e8491d;
         font-size: 18px;

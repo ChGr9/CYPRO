@@ -25,7 +25,7 @@ button{
     color: #35424a;
     font-weight: bold;
     background-color: lightslategrey;
-    padding: 3px 45px 2px 50px;
+    padding: 3px 45px 5px 50px;
     transition: 0.6s;
 }
 
@@ -44,8 +44,8 @@ ul{
 header{
     background: #35424a;
     color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
+    padding-top: 1px;
+    min-height: 68px;
     border-bottom: #e8491d 3px solid;
 }
 
@@ -77,7 +77,7 @@ header #branding{
 }
 header nav{
     float:right;
-    margin-top:10px;
+    margin-top:20px;
 }
 
 header .highlight, header .current a, section .highlight{
@@ -108,10 +108,12 @@ header a:hover{
 
 #showcase{
     min-height: 400px;
-    background: url("DNA1.jpg") 0 -1000px no-repeat;
-    background-size: auto;
-    text-align:center;
+    background: url(DNA1.jpg)-270px -220px;
+    position: initial;
+    background-size: 150%;
+    text-align: center;
     color: #ffffff;
+    transition: 10s;
 }
 
 #showcase h1{
@@ -121,11 +123,11 @@ margin-top:100px;
     color: #ffffff;
 }
 #showcase p{
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 10px;
 }
 #login{
-    padding:50px;
+    padding:30px;
     color:white;
     background:#35424a;
 }
@@ -139,7 +141,7 @@ margin-top:100px;
 #login form{
     float: left;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 77px;
 
 }
 
@@ -171,4 +173,36 @@ footer{
     color: white;
     background-color:#e8491d;
     text-align: center;
+}
+
+
+/* Media Queries */
+@media(max-width: 768px){
+    #boxes .box,header nav,header #branding{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    .container li,.container a{
+        float: left;
+        font-size: 14px;
+    }
+    .container{
+        width: 100%;
+    }
+    #showcase{
+        min-height: 400px;
+        background: url(DNA1.jpg)-2500px -719px;
+        position: initial;
+        background-size: 970%;
+        text-align: center;
+        color: #ffffff;
+        transition: 10s;
+    }
+}
+@media(max-width: 373px) {
+    .container li, .container a {
+        float: left;
+        font-size: 14px;
+    }
 }

@@ -70,10 +70,10 @@ function submitanswer(url) {
         if (this.readyState === 4 && this.status === 200) {
             let object = JSON.parse(this.responseText);
             //messages.innerHTML = object.message;
+            getscore();
             if (object.correct == true){
                 getquestion();
             }
-            getscore();
         }
         else {
             //TODO If response not received (error).

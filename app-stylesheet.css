@@ -279,7 +279,7 @@ header a:hover{
 #questions {
     display: none;
 }
-
+/* Step 5 */
 /*input type="text"*/
 .textanswer{
     padding: 3px 0 5px 5pc;
@@ -296,8 +296,8 @@ header a:hover{
     opacity: 1;
     -webkit-appearance: button;
     margin: 0;
-
 }
+
 
 footer{
     padding: 10px;

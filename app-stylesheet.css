@@ -6,7 +6,7 @@ body{
 }
 .home{
     background-color: #0e0e0e;
-    padding: 12px 25px 10px 93px;
+    padding: 13px 25px 10px 100px;
 }
 
 .logo {
@@ -147,7 +147,8 @@ header a:hover{
 
 /*boxes*/
 #boxes{
-    margin-top:20px;
+    margin-top: 39px;
+    padding-bottom: 2%;
 }
 
 #boxes .box{
@@ -177,11 +178,20 @@ header a:hover{
     display:none;
     width: 100%;
 }
-/* STEP 2 */
+/* STEP 3 */
 #welcome3 {                                                      /*HIDDEN*/
     padding-top: 30px;
-    display:none;
+    display:block;
     width: 100%;
+}
+/* OPINION TITLE */
+.opinion{
+    padding-right: 13%;
+    margin-bottom: 0;
+    color: #e8491d;
+    font-size: 18px;
+    position: sticky;
+    transition: 5s;
 }
 
 
@@ -270,6 +280,13 @@ header a:hover{
     display: none;
 }
 
+/*input type="text"*/
+.textanswer{
+    padding: 3px 0 5px 5pc
+}
+
+/*input type="number"*/
+
 footer{
     padding: 10px;
     margin-top: 10px;
@@ -280,7 +297,7 @@ footer{
 
 
 /* Media Queries */
-@media(max-width: 768px){
+@media(max-width: 777px){
 #boxes .box,header nav,header #branding{
     float: none;
     text-align: center;
@@ -302,11 +319,23 @@ footer{
         color: #ffffff;
         transition: 10s;
     }
+    .opinion{
+        padding-right: 27%;
+        margin-bottom: 0;
+        color: #e8491d;
+        font-size: 18px;
+        position: sticky;
+        transition: 8s;
+        transition-delay: 2s;
+    }
+
 
 }
+
 @media(max-width: 373px) {
     .container li, .container a {
         float: left;
-        font-size: 14px;
+        font-size: 13px;
+        padding: 3px 6px 3px 7px;
     }
 }

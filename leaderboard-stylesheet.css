@@ -7,7 +7,7 @@ body{
 
 .home{
     background-color: #0e0e0e;
-    padding: 12px 25px 10px 93px;
+    padding: 13px 25px 10px 100px;
 }
 
 .logo {
@@ -155,7 +155,8 @@ header a:hover {
 
 /*boxes*/
 #boxes{
-    margin-top:20px;
+    margin-top: 39px;
+    padding-bottom: 2%;
 }
 
 #boxes .box{
@@ -231,6 +232,6 @@ margin-top:auto;
 @media(max-width: 373px) {
     .container li, .container a {
         float: left;
-        font-size: 14px;
+        font-size: 13px;
     }
 }

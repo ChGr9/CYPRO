@@ -56,6 +56,24 @@ function getTreasureHuntList() {
     xhttp.send();
 }
 
+function sendposition(position) {
+    let lat = position.coords.latitude;
+    let lng = position.coords.longitude;
+    let xhttp = new XMLHttpRequest();
+    let requesturl = apiurl + "location?session=" + session + "&latitude=" + lat + "&longitude" + lng;
+    xhttp.open("GET", requesturl, true);
+    xhttp.send();
+}
+
+function getlocation() {
+    if (navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(sendposition);
+    }
+    else {
+        //messages.innerHTML = "Turn on location";
+    }
+}
+
 function displaylogin(e){
     uuid = e.target.attributes.id.value;
     document.getElementById("treasurehuntlist").style.display = "none";
@@ -65,6 +83,7 @@ function displaylogin(e){
 }
 
 function submitanswer(url) {
+    getlocation();
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -90,7 +109,8 @@ function lianswer(e) {
 }
 
 function inputboxanswer() {
-    let requesturl = apiurl + "answe?session=" + session + "&answer=" + document.getElementById("inputbox").innerHTML;
+    let answer = document.getElementById("inputbox").value;
+    let requesturl = apiurl + "answe?session=" + session + "&answer=" + answer.toString();
     submitanswer(requesturl);
 }
 
@@ -202,6 +222,5 @@ function loginsubmit(){
     xhttp.open("GET",requesturl,true);
     xhttp.send();
 }
-
 var uuid;
 var session;

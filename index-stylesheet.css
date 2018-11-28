@@ -25,7 +25,7 @@ button{
     color: #35424a;
     font-weight: bold;
     background-color: lightslategrey;
-    padding: 3px 43px 4px 50px;
+    padding: 3px 45px 5px 50px;
     transition: 0.6s;
 }
 
@@ -44,8 +44,8 @@ ul{
 header{
     background: #35424a;
     color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
+    padding-top: 1px;
+    min-height: 68px;
     border-bottom: #e8491d 3px solid;
 }
 
@@ -77,7 +77,7 @@ header #branding{
 }
 header nav{
     float:right;
-    margin-top:10px;
+    margin-top:20px;
 }
 
 header .highlight, header .current a, section .highlight{
@@ -123,11 +123,11 @@ margin-top:100px;
     color: #ffffff;
 }
 #showcase p{
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 10px;
 }
 #login{
-    padding:50px;
+    padding:30px;
     color:white;
     background:#35424a;
 }
@@ -184,7 +184,7 @@ footer{
         width: 100%;
     }
     .container li,.container a{
-        float: right;
+        float: left;
         font-size: 14px;
     }
     .container{

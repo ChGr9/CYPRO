@@ -13,6 +13,9 @@ body{
     height: 67px;
     position: absolute;
 }
+.show{
+    color: #c30303;
+}
 
 /*-------------------------------------------------------------------------------------------------------------*/
 
@@ -187,12 +190,18 @@ header a:hover{
 }
 /* STEP 3 */
 #welcome3 {                                                      /*HIDDEN*/
-    padding-top: 30px;
+    padding-top: 6px;
     display:block;
     width: 100%;
 }
+/* QUESTION TITLE */
+.highlight{                                                      /*HIDDEN*/
+    text-transform: uppercase;
+    display: block;
+}
 /* OPINION TITLE */
-.opinion{
+.opinion{                                                        /*HIDDEN*/
+    display: none;
     padding-right: 13%;
     padding-top: 35px;
     margin-bottom: 0;
@@ -205,6 +214,11 @@ header a:hover{
 /*-------------------------------------------------------------------------------------------------------------*/
 
 /* GAME STEPS OPTIONS*/
+/*Question Header*/
+.QQ{
+    color: #e8491d;
+    display: none;
+}
 
 /* STEP 1 OPTIONS*/
 /*Choose Samples*/
@@ -238,10 +252,6 @@ header a:hover{
 
 #showcase .sample{
     padding: 5px 0 5px 0;
-}
-
-.highlight{
-    text-transform: uppercase;
 }
 
 #treasurehuntlist {                                                   /*HIDDEN*/
@@ -316,13 +326,37 @@ header a:hover{
 /* Step 6*/
 /*TRUE & FALSE*/
 .container5{
-    display: block;                                                   /*HIDDEN*/
+    display: none;                                                   /*HIDDEN*/
     padding: 2%;
 }
 
 .or{
     margin: -10px 10px -4px 8px;
     color: #00f1ff;
+}
+
+/* Step 7*/
+/*END*/
+#end{
+    display: none;                                                  /*HIDDEN*/
+}
+.replay1{
+    color: #2acc04;
+    padding: 14px 142px 14px 142px;
+}
+
+.replay2{
+    color: gold;
+    padding: 14px 147px 14px 147px;
+}
+
+.replay3{
+     color: white;
+    padding: 14px 145px 14px 144px;
+ }
+
+.replay1,.replay2,.replay3:hover{
+    transition: 0.8s;
 }
 
 /*-------------------------------------------------------------------------------------------------------------*/

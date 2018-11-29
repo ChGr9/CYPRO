@@ -16,6 +16,16 @@ body{
 .show{
     color: #c30303;
 }
+.points{
+    color: #00f1ff;
+    margin: -4px 0 -32px -13pc;
+    position: inherit;
+}
+.ptitle{
+    margin: -29px 0 0 -4px;
+    padding-top: 28px;
+    position: absolute;
+}
 
 /*-------------------------------------------------------------------------------------------------------------*/
 
@@ -191,7 +201,7 @@ header a:hover{
 /* STEP 3 */
 #welcome3 {                                                      /*HIDDEN*/
     padding-top: 6px;
-    display:block;
+    display:none;
     width: 100%;
 }
 /* QUESTION TITLE */
@@ -217,7 +227,7 @@ header a:hover{
 /*Question Header*/
 .QQ{
     color: #e8491d;
-    display: none;
+    display: block;
 }
 
 /* STEP 1 OPTIONS*/
@@ -305,6 +315,7 @@ header a:hover{
 /*NUMERIC ANSWERS*/
 .container4{                                                          /*HIDDEN*/
     display: none;
+    padding-top: 25px;
 }
 
 .numberanswer{
@@ -387,6 +398,7 @@ footer{
         text-align: center;
         color: #ffffff;
         transition: 10s;
+        padding: 10px;
     }
     .opinion{
         padding-right: 27%;
@@ -398,8 +410,6 @@ footer{
         transition: 8s;
         transition-delay: 2s;
     }
-
-
 }
 
 @media(max-width: 373px) {
@@ -407,5 +417,32 @@ footer{
         float: left;
         font-size: 13px;
         padding: 3px 6px 3px 7px;
+    }
+}
+/*POINTS*/
+@media(min-width: 475px){
+    .points{
+        color: #00f1ff;
+        margin: -5px 100px -32px -13pc;
+        position: inherit;
+        transition: 5s;
+    }
+}
+
+@media(min-width: 580px){
+    .points{
+        color: #00f1ff;
+        margin: -5px 210px -32px -13pc;
+        position: inherit;
+        transition: 5s;
+    }
+}
+
+@media(min-width: 1200px){
+    .points{
+        color: #00f1ff;
+        margin: -5px 755px -32px -13pc;
+        position: inherit;
+        transition: 5s;
     }
 }

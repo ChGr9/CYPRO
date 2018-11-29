@@ -17,7 +17,7 @@ function emptyLeaderboard() {
     }
 }
 function leaderboard() {
-    if (session == "") {
+    if (session == undefined) {
         emptyLeaderboard();
     }
     else {

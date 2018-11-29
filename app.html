@@ -63,42 +63,33 @@
             <li class = "button">C</li>
             <li class = "button">D</li>
         </ul>
-        <!--CHOOSE TRUE OR FALSE-->                             <!--CHRISTOS ELEMENT-->
-        <ul class = "buttons" id="tof">
-            <li class = "button">True</li>
-            <li class = "button">False</li>
-        </ul>
     </div>
         <!--Step 4-->
         <!--TEXT ANSWERS-->
-    <div class="container3">
-        <form>
-            <h3 class="opinion">What do you think?</h3>
-            <label>
-                <input class="textanswer" placeholder="Type here..." type="text" name="answer">
-                <button class="button_1" type="button">GO!</button>
-            </label>
-        </form>
+    <div class="container3" id="textbox">
+        <h3 class="opinion">What do you think?</h3>
+        <label>
+            <input class="textanswer" placeholder="Type here..." type="text" name="answer" id="textanswer">
+            <button onclick="inputtext()" class="button_1" type="button">GO!</button>
+        </label>
     </div>
         <!--Step 5-->
         <!--NUMERIC ANSWERS-->
     <h3 class="opinion">What do you think?</h3>
-    <div class="container4">
-        <form>
-            <label>
-                <input class="numberanswer" placeholder="Type number..." type="number" name="answer">
-                <button class="button_1" type="button">GO!</button>
-            </label>
-        </form>
+    <div class="container4" id="numberbox">
+        <label>
+            <input class="numberanswer" placeholder="Type number..." type="number" name="answer" id="numberanswer">
+            <button onclick="inputnumber()" class="button_1" type="button">GO!</button>
+        </label>
     </div>
        <!--Step 6-->
        <!--True or False (BUTTONS)-->
-    <div class="container5">
+    <div class="container5" id="tof">
         <div>
             <h4 class="or">OR</h4>
         </div>
-        <button class="truefalse" type="button" >TRUE</button>
-        <button class="truefalse" type="button" >FALSE</button>
+        <button onclick="inputtof(true)" class="truefalse" type="button" >TRUE</button>
+        <button onclick="inputtof(false)" class="truefalse" type="button" >FALSE</button>
     </div>
     <!--Step 7-->
     <!--END-->
@@ -106,13 +97,13 @@
         <h2><span class="highlight">congratulations</span>You have finished the game!! </h2>
         <h3><span class="highlight">CLICK RANK</span> to find out who are the top 10 Teams</h3>
     <div>                                                                                         <!--NEED JAVASCRIPT (on click='myFunction'()-->
-        <button onclick="" class="replay1">PLAY AGAIN</button>                                   <!--Or we can change it to <a href="http://example.com">My Link</a>-->
+        <button onclick="playagain()" class="replay1">PLAY AGAIN</button>                                   <!--Or we can change it to <a href="http://example.com">My Link</a>-->
     </div>
     <div>
-        <button onclick="" class="replay2">TOP    RANK</button>
+        <button onclick="location.href='leaderboard.html'" class="replay2">TOP    RANK</button>
     </div>
     <div>
-        <button onclick="" class="replay3">MAIN   PAGE</button>
+        <button onclick="location.href='index.html'" class="replay3">MAIN   PAGE</button>
     </div>
     </div>
 </section>

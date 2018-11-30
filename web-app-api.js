@@ -158,10 +158,11 @@ function linkanswers() {
 
 function getscore() {
     let xhttp = new XMLHttpRequest();
+    let score = document.getElementById("points");
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200){
             let object = JSON.parse(this.responseText);
-            //score.innerHTML = object.score;
+            score.innerHTML = object.score;
         }
         else {
             //TODO If response not received (error).
@@ -212,10 +213,9 @@ function getquestion() {
             }
             else {
                 //messages.innerHTML = "";
-                document.getElementById("mcq").style.display = "none";
-                document.getElementById("numberbox").style.display = "none";
-                document.getElementById("textbox").style.display = "none";
-                document.getElementById("tof").style.display = "none";
+                document.getElementById("welcome3").style.display = "none";
+                document.getElementById("questions").style.display = "none";
+                document.getElementById("viewpoints").style.display = "none";
                 document.getElementById("end").style.display = "block";
             }
         }
@@ -233,6 +233,7 @@ function displayQuestions() {
     document.getElementById("welcome2").style.display = "none";
     document.getElementById("welcome3").style.display = "block";
     document.getElementById("questions").style.display = "block";
+    document.getElementById("viewpoints").style.display = "block";
     linkanswers();
 }
 

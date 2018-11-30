@@ -409,16 +409,6 @@ footer{
         transition: 10s;
         padding: 10px;
     }
-    .opinion{
-        padding-right: 27%;
-        padding-top: 35px;
-        margin-bottom: 0;
-        color: #e8491d;
-        font-size: 18px;
-        position: sticky;
-        transition: 8s;
-        transition-delay: 2s;
-    }
 }
 
 @media(max-width: 373px) {

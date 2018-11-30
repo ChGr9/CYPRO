@@ -16,6 +16,10 @@ body{
 .show{
     color: #c30303;
 }
+
+#showpoints {
+    display: none;
+}
 .points{
     color: #00f1ff;
     margin: -4px 0 -32px -13pc;

@@ -102,6 +102,16 @@ function displaylogin(e){
     document.getElementById("welcome2").style.display = "block";
 }
 
+function skip() {
+    if (confirm("Are you sure you want to skip the current question?")) {
+        let xhttp = new XMLHttpRequest();
+        let requesturl = apiurl + "skip?session" + session;
+        xhttp.open("GET", requesturl, true);
+        xhttp.send();
+        //message.innerHTML = "Skipped";
+    }
+}
+
 function submitanswer(url) {
     getlocation();
     let xhttp = new XMLHttpRequest();
@@ -168,6 +178,9 @@ function getscore() {
             //TODO If response not received (error).
         }
     }
+    let requesturl = apiurl + "score?session=" + session;
+    xhttp.open("GET", requesturl, true);
+    xhttp.send();
 }
 
 function getquestion() {

@@ -28,9 +28,10 @@ body{
 }
 
 .ptitle{
-    margin: -29px 0 0 -4px;
-    padding-top: 28px;
+    padding: 7px 30px 5px 12px;
     position: absolute;
+    background: black;
+    margin-top: 0;
 }
 
 /*-------------------------------------------------------------------------------------------------------------*/
@@ -44,9 +45,9 @@ body{
 }
 
 button{
-    color: #000000;
+    color: #00f1ff;
     font-weight: bold;
-    background-color: #646c73e3;
+    background-color: #646c73;
     padding: 5px 40px 5px 40px;
     transition: 0.6s;
 }
@@ -55,6 +56,14 @@ button:hover{
     color:#e8491d;
     transition: 0.5s;
     font-weight: bold;
+}
+
+.button_1{
+    padding: 2px 11px 3px 11px;
+}
+
+#teamname{
+    padding:2px 0 3px 0;
 }
 
 ul{
@@ -194,9 +203,10 @@ header a:hover{
 /* MESSAGES FOR GAME OPTIONS */
 /* STEP 1 */
 #welcome1 {                                                      /*HIDDEN*/
-    padding-top: 30px;
     display:none;
     width: 100%;
+    color: #00f1ff;
+    padding-top: 53px;
 }
 /* STEP 2 */
 #welcome2 {                                                      /*HIDDEN*/
@@ -239,11 +249,11 @@ header a:hover{
 /* STEP 1 OPTIONS*/
 /*Choose Samples*/
 .samples {                                                       /*HIDDEN*/
-    padding: 5px 0 5px 0;
+    padding-top: 10px;
     overflow: hidden;
-    width: 85%;
-    transform: translate(10%,0%);
+    width: 44%;
     display: none;
+    margin-left: 28%;
 }
 
 #showcase .samples li{
@@ -278,6 +288,7 @@ header a:hover{
 /*GIVE TEAM NAME*/
 #form2{                                                              /*HIDDEN*/
     display: none;
+    margin-left: 55px;
 }
 
 /* Step 3 OPTIONS*/
@@ -409,6 +420,26 @@ footer{
         transition: 10s;
         padding: 10px;
     }
+    .samples {
+        padding-top: 10px;
+        overflow: hidden;
+        width: 67%;
+        display: none;
+        margin-left: 16%;
+    }
+    #showcase .samples li {
+        padding: 3px 10px 2px 10px;
+        margin-top: 20px;
+        color: #ffffff;
+        background-color: #35424a;
+        font-weight: bold;
+        font-size: 17px;
+        text-decoration: none;
+        border: 2px solid #e8491d;
+        list-style-type: none;
+        transition: 0.7s;
+        text-transform: uppercase;
+    }
 }
 
 @media(max-width: 373px) {
@@ -417,4 +448,25 @@ footer{
         font-size: 13px;
         padding: 3px 6px 3px 7px;
     }
+    .samples {
+        padding-top: 10px;
+        overflow: hidden;
+        width: 67%;
+        display: none;
+        margin-left: 16%;
+    }
+    #showcase .samples li {
+        padding: 3px 10px 2px 10px;
+        margin-top: 20px;
+        color: #ffffff;
+        background-color: #35424a;
+        font-weight: bold;
+        font-size: 17px;
+        text-decoration: none;
+        border: 2px solid #e8491d;
+        list-style-type: none;
+        transition: 0.7s;
+        text-transform: uppercase;
+    }
+
 }

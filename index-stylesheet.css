@@ -22,10 +22,10 @@ body{
 }
 
 button{
-    color: #35424a;
+    color: #00f1ff;
     font-weight: bold;
-    background-color: lightslategrey;
-    padding: 3px 45px 5px 50px;
+    background-color: #646c73;
+    padding: 5px 40px 5px 40px;
     transition: 0.6s;
 }
 
@@ -33,6 +33,7 @@ button:hover {
     color: #e8491d;
     transition: 0.5s;
     font-weight: bold;
+    border-color: #35424a;
 }
 
 ul{
@@ -146,8 +147,8 @@ margin-top:100px;
 }
 
 #login input[type="text"]{
-    padding: 4px;
-    height: 10px;
+    padding: 5px;
+    height: 15px;
     width: 150px;
 }
 

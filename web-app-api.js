@@ -51,7 +51,8 @@ function leaderboard() {
 }
 function getTreasureHuntList() {
     let xhttp = new XMLHttpRequest();
-    //var messages = document.getElementById("messages");
+    var messages = document.getElementById("messages");
+    var loginmessages = document.getElementById("loginmessages");
     let treasurehuntList = document.getElementById("treasurehuntlist");
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
@@ -89,9 +90,6 @@ function getlocation() {
     if (navigator.geolocation){
         navigator.geolocation.getCurrentPosition(sendposition);
     }
-    else {
-        //messages.innerHTML = "Turn on location";
-    }
 }
 
 function displaylogin(e){
@@ -105,10 +103,23 @@ function displaylogin(e){
 function skip() {
     if (confirm("Are you sure you want to skip the current question?")) {
         let xhttp = new XMLHttpRequest();
-        let requesturl = apiurl + "skip?session" + session;
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200){
+                let object = JSON.parse(this.responseText);
+                if (object.status === "OK") {
+                    messages.className = "successmessage";
+                    getquestion();
+                    messages.innerHTML = object.message;
+                }
+                else {
+                    messages.className = "errormessage";
+                    messages.innerHTML = object.errorMessages[0];
+                }
+            }
+        }
+        let requesturl = apiurl + "skip?session=" + session;
         xhttp.open("GET", requesturl, true);
         xhttp.send();
-        //message.innerHTML = "Skipped";
     }
 }
 
@@ -118,10 +129,23 @@ function submitanswer(url) {
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             let object = JSON.parse(this.responseText);
-            //messages.innerHTML = object.message;
-            getscore();
-            if (object.correct === true){
-                getquestion();
+            if (object.status === "OK") {
+                if (object.correct === true) {
+                    messages.className = "successmessage";
+                }
+                else {
+                    messages.className = "errormessages"
+                }
+                messages.innerHTML = object.message;
+                console.log(object);
+                getscore();
+                if (object.correct === true) {
+                    getquestion();
+                }
+            }
+            else {
+                messages.className = "errormessage";
+                messages.innerHTML = object.errorMessages[0];
             }
         }
         else {
@@ -188,6 +212,7 @@ function getquestion() {
     xhttp.onreadystatechange = function () {
         if (this.readyState===4 && this.status === 200){
             let object = JSON.parse(this.responseText);
+            console.log(object);
             if (object.completed == false) {
                 let questiontype = object.questionType;
                 document.getElementById("questions").innerHTML = object.questionText;
@@ -225,10 +250,11 @@ function getquestion() {
                 }
             }
             else {
-                //messages.innerHTML = "";
+                messages.innerHTML = "";
                 document.getElementById("welcome3").style.display = "none";
                 document.getElementById("questions").style.display = "none";
                 document.getElementById("showpoints").style.display = "none";
+                document.getElementById("skipbutton").style.display = "none";
                 document.getElementById("end").style.display = "block";
             }
         }
@@ -247,12 +273,13 @@ function displayQuestions() {
     document.getElementById("welcome3").style.display = "block";
     document.getElementById("questions").style.display = "block";
     document.getElementById("showpoints").style.display = "block";
+    document.getElementById("skipbutton").style.display = "block";
     linkanswers();
 }
 
 function loginsubmit(){
     let v = document.getElementById("teamname").value;
-    //messages.innerHTML = "";
+    loginmessages.innerHTML = "";
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200){
@@ -262,7 +289,7 @@ function loginsubmit(){
                 displayQuestions();
             }
             else if (object.status === "ERROR"){
-                //messages.innerHTML = object.errorMessages[0];
+                loginmessages.innerHTML = object.errorMessages[0];
             }
         }
         else {

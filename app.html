@@ -34,8 +34,7 @@
         <div class="viewpoints" id= "showpoints">
             <h3 class="ptitle">Points: <p class="points" id= "points"></p></h3>
             <div id="messagebox">                                                                                                                                  <!--ERROR BOXES FOR ANSWERS--JavaScript NEEDED-->
-                <h2 class="errormessage">Wrong answer. Try again !</h2>
-                <h2 class="successmessage">Success!</h2>
+                <h2 id="messages"></h2>
             </div>
         </div>
         <!--Choose Samples TITLE-->
@@ -61,7 +60,7 @@
             <input type="submit" class="button_1" value="Enter">
         </form>
         <div id="exist">
-            <h2>Already exist!</h2>
+            <h2 id="loginmessages"></h2>
         </div>
     </div>
         <!--Step 3-->
@@ -119,8 +118,8 @@
         <br>
             <br>
     <!--SKIP BUTTON-->
-    <div class="skip">                                                                                                                                      <!--IMPORTANT-->
-        <button class="button_2">SKIP <span id="skips">3</span></button>                                                        <!--NEED JAVASCRIPT FOR SKIP ("span id" remove number and give onclick)-->
+    <div class="skip" id="skipbutton">                                                                                                                                      <!--IMPORTANT-->
+        <button class="button_2" onclick="skip()">SKIP</button>                                                        <!--NEED JAVASCRIPT FOR SKIP ("span id" remove number and give onclick)-->
     </div>
 
 </section>

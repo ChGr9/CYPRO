@@ -113,7 +113,7 @@ function skip() {
                 }
                 else {
                     messages.className = "errormessage";
-                    messages.innerHTML = object.errorMessages[0];
+                    messages.innerHTML = "Question can't be skipped";
                 }
             }
         }
@@ -289,7 +289,7 @@ function loginsubmit(){
                 displayQuestions();
             }
             else if (object.status === "ERROR"){
-                loginmessages.innerHTML = object.errorMessages[0];
+                loginmessages.innerHTML = v + ", is already in use";
             }
         }
         else {

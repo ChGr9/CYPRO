@@ -30,12 +30,14 @@
 <section id="showcase">
     <div class="container">
         <!---------------------------------Messages for Game STEP BY STEP------------------------------>
-        <!--Points Box & Header Title-->
+        <!--Points Box & CORRECT-ERROR Title-->
         <div class="viewpoints" id= "showpoints">
             <h3 class="ptitle">Points: <p class="points" id= "points"></p></h3>
-
+            <div id="messagebox">
+                <h2 class="errormessage">Wrong answer. Try again !</h2>
+                <h2 class="successmessage">Success!</h2>
+            </div>
         </div>
-
         <!--Choose Samples TITLE-->
         <h2 id="welcome1">First Choose <span class="highlight">Treasure Hunt</span></h2>
         <!--GIVE TEAM NAME TITLE-->
@@ -43,9 +45,8 @@
         <h2>How should we call it? </h2>
         <h2><span class="highlight">team name</span></h2>
         </div>
-        <!--QUESTION HEADER TITLE-->                                          <!--Maybe we need or not-->
-        <h2 id="welcome3"><span class="QQ">Question</span></h2>
-        <!--<p>TESTQUESTIONSESTQUESTIONSESTQUESTIONSESTQUESTIONS</p>          <!--TEST Question / Test Element / Delete Christo when you finish-->
+        <!--QUESTION HEADER TITLE-->
+        <h2 id="welcome3"><span class="QQ">Question: <span class="counter">1</span><span> - </span><span class="limit">10</span></span></h2>                       <!--Questions Counter (ex. 1 out of 10)--> <!--"counter" for **1** out of 10)--> <!--"limit" for 1 out of **10**)-->
         <!--JavaScript take place-->
         <h4 id="questions"></h4>
 

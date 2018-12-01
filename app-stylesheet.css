@@ -33,6 +33,19 @@ body{
     background: black;
     margin-top: 0;
 }
+/*GAME MESSAGES--WRONG & CORRECT*/
+
+.errormessage{                                     /*Wrong Answer GIVEN*/
+    margin-top: 0;
+    color: crimson;
+    display: none;
+}
+
+.successmessage{                                   /*Correct Answer GIVEN*/
+    margin-top: 0;
+    color: honeydew;
+    display: none;
+}
 
 /*-------------------------------------------------------------------------------------------------------------*/
 
@@ -275,7 +288,7 @@ header a:hover{
 /* GAME STEPS OPTIONS*/
 /*Question Header*/
 .QQ{
-    color: #e8491d;
+    color: #08d050;
     display: block;
 }
 

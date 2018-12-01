@@ -302,6 +302,7 @@ header a:hover{
 .QQ{
     color: #08d050;
     display: block;
+    padding-top: 10px;
 }
 
 /* STEP 1 OPTIONS*/
@@ -533,6 +534,9 @@ footer{
         list-style-type: none;
         transition: 0.7s;
         text-transform: uppercase;
+    }
+    #form2{
+        margin-left: 10px;
     }
 
 }

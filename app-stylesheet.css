@@ -72,7 +72,7 @@ input.button_1{
 }
 /*SKIP BUTTON*/                                                 /*SKIP(JAVASCRIPT NEEDED)*/
 .skip{
-    display: block;
+    display: none;
     transition: opacity 0.2s ease;
 }
 

@@ -33,6 +33,7 @@ body{
     background: black;
     margin-top: 0;
 }
+
 /*GAME MESSAGES--WRONG & CORRECT*/
 
 .errormessage{                                     /*Wrong Answer GIVEN*/
@@ -44,6 +45,16 @@ body{
 .successmessage{                                   /*Correct Answer GIVEN*/
     margin-top: 0;
     color: honeydew;
+    display: none;
+}
+
+/*Team Name Error*/
+
+#exist{                                           /*Already exist Error*/
+    color: #ef0000;
+    margin-right: 106px;
+    font-size: 16px;
+    margin-top: 5px;
     display: none;
 }
 

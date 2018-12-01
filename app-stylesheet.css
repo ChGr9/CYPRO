@@ -36,7 +36,7 @@ body{
 
 /*-------------------------------------------------------------------------------------------------------------*/
 
-/* Global */
+/* Global + Buttons */
 
 .container{
     width:92%;
@@ -60,6 +60,30 @@ button:hover{
 
 .button_1{
     padding: 2px 11px 3px 11px;
+}
+
+input.button_1{
+    background: #646c73;
+    color: #00f1ff;
+    padding: 3px 27px 3px 27px;
+}
+/*SKIP BUTTON*/                                                 /*SKIP(JAVASCRIPT NEEDED)*/
+.skip{
+    display: none;
+    transition: opacity 0.2s ease;
+}
+
+.button_2{
+    color: #3fde3c;
+    background: #0e0e0e;
+    transition: 0.5s;
+}
+
+.button_2:hover .skip{
+    transition: opacity 0.2s ease;
+    color: #000000;
+    background: #ffffff;
+
 }
 
 #teamname{
@@ -306,9 +330,10 @@ header a:hover{
     padding: 15px 65px 10px 60px;
     border: 2px solid #e8491d;
     margin-left: 2%;
-    color: #ffffff;
+    color: #0e0e0e;
     font-weight: bold;
     font-size: 15px;
+    background: chocolate;
 }
 
 #mcq {                                                               /*HIDDEN*/

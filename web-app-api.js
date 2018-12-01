@@ -251,6 +251,10 @@ function getquestion() {
             }
             else {
                 messages.innerHTML = "";
+                document.getElementById("textbox").style.display = "none";
+                document.getElementById("numberbox").style.display = "none";
+                document.getElementById("mcq").style.display = "none";
+                document.getElementById("tof").style.display = "none";
                 document.getElementById("welcome3").style.display = "none";
                 document.getElementById("questions").style.display = "none";
                 document.getElementById("showpoints").style.display = "none";

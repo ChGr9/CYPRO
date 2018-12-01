@@ -28,7 +28,7 @@ body{
 }
 
 .ptitle{
-    padding: 7px 30px 5px 12px;
+    padding: 7px 35px 5px 12px;
     position: absolute;
     background: black;
     margin-top: 0;
@@ -39,11 +39,15 @@ body{
 .errormessage{                                     /*Wrong Answer GIVEN*/
     margin-top: 0;
     color: crimson;
+    padding-top: 60px;
+    margin-bottom: -50px;
 }
 
 .successmessage{                                   /*Correct Answer GIVEN*/
     margin-top: 0;
     color: honeydew;
+    padding-top: 60px;
+    margin-bottom: -50px;
 }
 
 /*Team Name Error*/
@@ -359,7 +363,7 @@ header a:hover{
 .button{
     float: left;
     display: inline-block;
-    padding: 15px 65px 10px 60px;
+    padding: 10px 60px 10px 60px;
     border: 2px solid #e8491d;
     margin-left: 2%;
     color: #0e0e0e;

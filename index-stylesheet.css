@@ -36,6 +36,13 @@ button:hover {
     border-color: #35424a;
 }
 
+/*Activate Button*/
+
+.activate{
+    padding: 5px 47px 5px 48px;
+}
+
+
 ul{
     margin:0;
     padding:0;

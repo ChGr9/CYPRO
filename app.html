@@ -102,8 +102,8 @@
     <div id="end">
         <h2><span class="highlight">congratulations</span>You have finished the game!! </h2>
         <h3><span class="highlight">CLICK RANK</span> to find out who are the top 10 Teams</h3>
-    <div>                                                                                         <!--NEED JAVASCRIPT (on click='myFunction'()-->
-        <button onclick="playagain()" class="replay1">PLAY AGAIN</button>                                   <!--Or we can change it to <a href="http://example.com">My Link</a>-->
+    <div>
+        <button onclick="playagain()" class="replay1">PLAY AGAIN</button>
     </div>
     <div>
         <button onclick="location.href='leaderboard.html'" class="replay2">TOP    RANK</button>
@@ -115,8 +115,8 @@
         <br>
             <br>
     <!--SKIP BUTTON-->
-    <div class="skip">
-        <button class="button_2">SKIP <span id="skips">3</span></button>
+    <div class="skip">                                                                                                                                      <!--IMPORTANT-->
+        <button class="button_2">SKIP <span id="skips">3</span></button>                                                        <!--NEED JAVASCRIPT FOR SKIP ("span id" remove number and give onclick)-->
     </div>
 </section>
 
@@ -127,7 +127,7 @@
         <h1>Developer Code:</h1>
         <form>
             <input type="text" placeholder="ex: night mode">
-            <button type="button" class="button_1">ACTIVATE</button>
+            <button type="button" class="activate">ACTIVATE</button>
         </form>
     </div>
 </section>

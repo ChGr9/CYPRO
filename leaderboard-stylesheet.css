@@ -15,6 +15,14 @@ body{
     position: absolute;
 }
 
+.top10{
+    text-align: center;
+    color: #f60000;
+    background-color: #35424a;
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
 /* Global */
 .container{
     width:92%;
@@ -196,7 +204,9 @@ tr{
 text-align:center;
 }
 td,th{
-padding:8px;
+    padding-right: 5%;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 tr:nth-of-type(odd){
 background:#16a085;

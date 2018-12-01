@@ -276,6 +276,7 @@ header a:hover{
     padding-top: 6px;
     display:none;
     width: 100%;
+    margin-top: 40px
 }
 /* QUESTION TITLE */
 .highlight{                                                      /*HIDDEN*/
@@ -498,6 +499,13 @@ footer{
         transition: 0.7s;
         text-transform: uppercase;
     }
+    .ptitle {
+        padding: 7px 32px 7px 12px;
+        position: absolute;
+        background: black;
+        margin-top: -10px;
+    }
+
 }
 
 @media(max-width: 373px) {

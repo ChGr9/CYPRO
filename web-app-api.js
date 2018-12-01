@@ -1,5 +1,17 @@
 const apiurl = "https://codecyprus.org/th/api/";
 
+function loadnotes() {
+    let rawFile = new XMLHttpRequest();
+    rawFile.onreadystatechange = function() {
+    if (rawFile.readyState === 4) {
+        let Text = rawFile.responseText;
+        document.body.innerHTML = Text;
+    }
+  }
+  rawFile.open("GET", "Notes.md", true);
+  rawFile.send();
+}
+
 function emptyLeaderboard() {
     let leaderboardtable = document.getElementById("leaderboard");
     for (let i = 0; i < 10; i++) {

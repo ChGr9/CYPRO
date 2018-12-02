@@ -164,6 +164,10 @@ function mcqanswer(e) {
     submitanswer(requesturl);
 }
 
+function inputtof(answer) {
+    let requesturl = apiurl + "answer?session=" + session + "&answer=" + answer;
+    submitanswer(requesturl);
+}
 function inputtext() {
     let element = document.getElementById("textanswer");
     let answer = element.value;

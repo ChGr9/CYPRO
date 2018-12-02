@@ -54,6 +54,7 @@ function getTreasureHuntList() {
     var messages = document.getElementById("messages");
     var loginmessages = document.getElementById("loginmessages");
     let treasurehuntList = document.getElementById("treasurehuntlist");
+    treasurehuntList.innerHTML = "";
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
             let object = JSON.parse(this.responseText);
@@ -98,6 +99,7 @@ function displaylogin(e){
     document.getElementById("welcome1").style.display = "none";
     document.getElementById("form2").style.display = "block";
     document.getElementById("welcome2").style.display = "block";
+    document.getElementById("teamname").innerHTML = "";
 }
 
 function skip() {
@@ -166,6 +168,7 @@ function inputtext() {
     let element = document.getElementById("textanswer");
     let answer = element.value;
     let requesturl = apiurl + "answer?session=" + session + "&answer=" + answer;
+    element.innerHTML = "";
     submitanswer(requesturl);
 }
 
@@ -173,11 +176,7 @@ function inputnumber() {
     let element = document.getElementById("numberanswer");
     let answer = element.value;
     let requesturl = apiurl + "answer?session=" + session + "&answer=" + answer;
-    submitanswer(requesturl);
-}
-
-function inputtof(answer) {
-    let requesturl = apiurl + "answer?session=" + session + "&answer=" + answer;
+    element.innerHTML = "";
     submitanswer(requesturl);
 }
 

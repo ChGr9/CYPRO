@@ -212,8 +212,8 @@ function getquestion() {
     xhttp.onreadystatechange = function () {
         if (this.readyState===4 && this.status === 200){
             let object = JSON.parse(this.responseText);
-            console.log(object);
             if (object.completed == false) {
+                document.getElementByID("currentquestion").innerHTML = object.currentQuestionIndex + "/" + object.numOfQuestions;
                 let questiontype = object.questionType;
                 document.getElementById("questions").innerHTML = object.questionText;
                 if (questiontype == "BOOLEAN") {

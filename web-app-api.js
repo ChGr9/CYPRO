@@ -213,7 +213,7 @@ function getquestion() {
         if (this.readyState===4 && this.status === 200){
             let object = JSON.parse(this.responseText);
             if (object.completed == false) {
-                document.getElementById("currentquestion").innerHTML = object.currentQuestionIndex + "/" + object.numOfQuestions;
+                document.getElementById("currentquestion").innerHTML = object.currentQuestionIndex + 1 + "/" + object.numOfQuestions;
                 let questiontype = object.questionType;
                 document.getElementById("questions").innerHTML = object.questionText;
                 if (questiontype == "BOOLEAN") {

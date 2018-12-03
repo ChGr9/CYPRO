@@ -134,16 +134,14 @@ function submitanswer(url) {
             if (object.status === "OK") {
                 if (object.correct === true) {
                     messages.className = "successmessage";
+                    messages.innerHTML = "Well done";
+                    getquestion();
                 }
                 else {
                     messages.className = "errormessages"
+                    messages.innerHTML = "Wrong answer";
                 }
-                messages.innerHTML = object.message;
-                console.log(object);
                 getscore();
-                if (object.correct === true) {
-                    getquestion();
-                }
             }
             else {
                 messages.className = "errormessage";

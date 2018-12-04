@@ -17,7 +17,11 @@ function emptyLeaderboard() {
     }
 }
 function leaderboard() {
-    if (session == undefined) {
+    let queryString = decodeURIComponent(window.location.search);
+    queryString = queryString.substring(1);
+    let array = queryString.split("=");
+    session = array[1];
+    if (session == "") {
         emptyLeaderboard();
     }
     else {
@@ -44,11 +48,16 @@ function leaderboard() {
                 //TODO If response not received (error).
             }
         };
-        let testurl = "https://codecyprus.org/th/test-api/leaderboard?sorted&size=10";
-        xhttp.open("GET", testurl, true);
+        let requesturl = apiurl + "leaderboard?session=" + session + "&sorted&limit=10";
+        xhttp.open("GET", requesturl, true);
         xhttp.send();
     }
 }
+
+function leaderboardcall() {
+    location.replace("leaderboard.html" + "?session=" + session);
+}
+
 function getTreasureHuntList() {
     let xhttp = new XMLHttpRequest();
     var messages = document.getElementById("messages");
@@ -170,7 +179,7 @@ function inputtext() {
     let element = document.getElementById("textanswer");
     let answer = element.value;
     let requesturl = apiurl + "answer?session=" + session + "&answer=" + answer;
-    element.innerHTML = "";
+    element.value = "";
     submitanswer(requesturl);
 }
 
@@ -178,7 +187,7 @@ function inputnumber() {
     let element = document.getElementById("numberanswer");
     let answer = element.value;
     let requesturl = apiurl + "answer?session=" + session + "&answer=" + answer;
-    element.innerHTML = "";
+    element.value = "";
     submitanswer(requesturl);
 }
 
@@ -217,6 +226,12 @@ function getquestion() {
                 document.getElementById("currentquestion").innerHTML = object.currentQuestionIndex + 1 + "/" + object.numOfQuestions;
                 let questiontype = object.questionType;
                 document.getElementById("questions").innerHTML = object.questionText;
+                if (object.canBeSkipped == true){
+                    document.getElementById("skipbutton").style.display = "block";
+                }
+                else {
+                    document.getElementById("skipbutton").style.display = "none";
+                }
                 if (questiontype == "BOOLEAN") {
                     document.getElementById("numberbox").style.display = "none";
                     document.getElementById("textbox").style.display = "none";
@@ -251,6 +266,7 @@ function getquestion() {
                 }
             }
             else {
+                document.cookie = "";
                 messages.innerHTML = "";
                 document.getElementById("textbox").style.display = "none";
                 document.getElementById("numberbox").style.display = "none";
@@ -291,6 +307,7 @@ function loginsubmit(){
             let object = JSON.parse(this.responseText);
             if (object.status === "OK"){
                 session = object.session;
+                document.cookie = session;
                 displayQuestions();
             }
             else if (object.status === "ERROR"){
@@ -311,5 +328,14 @@ function playagain() {
     getTreasureHuntList();
 }
 
-var uuid;
-var session;
+function checkcookies() {
+    if (session === ""){
+        getTreasureHuntList();
+    }
+    else {
+        var uuid;
+        displayQuestions();
+    }
+}
+
+var session = document.cookie;

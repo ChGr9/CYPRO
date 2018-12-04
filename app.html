@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <li class = "current"><a href="index.html">Home</a></li>
-                <li class = "current"><a href="leaderboard.html">Leaderboard</a></li>
+                <li class = "current"><a href="#" onclick="leaderboardcall()">Leaderboard</a></li>
                 <li class = "currentmain"><a href="app.html">Game Page</a></li>
             </ul>
         </nav>
@@ -109,7 +109,7 @@
         <button onclick="playagain()" class="replay1">PLAY AGAIN</button>
     </div>
     <div>
-        <button onclick="location.href='leaderboard.html'" class="replay2">TOP    RANK</button>
+        <button class="replay2" onclick="leaderboardcall()">TOP    RANK</button>
     </div>
     <div>
         <button onclick="location.href='index.html'" class="replay3">MAIN   PAGE</button>
@@ -168,7 +168,7 @@
 <!--Scrips Section-->
 
 <script src="web-app-api.js"></script>
-<script>getTreasureHuntList()</script>
+<script>checkcookies()</script>
 
 </body>
 </html>

@@ -62,6 +62,7 @@ function getTreasureHuntList() {
     let xhttp = new XMLHttpRequest();
     var messages = document.getElementById("messages");
     var loginmessages = document.getElementById("loginmessages");
+    var locationmessages = document.getElementById("locationmessages");
     let treasurehuntList = document.getElementById("treasurehuntlist");
     treasurehuntList.innerHTML = "";
     xhttp.onreadystatechange = function() {
@@ -108,7 +109,6 @@ function displaylogin(e){
     document.getElementById("welcome1").style.display = "none";
     document.getElementById("form2").style.display = "block";
     document.getElementById("welcome2").style.display = "block";
-    document.getElementById("teamname").innerHTML = "";
 }
 
 function skip() {
@@ -119,8 +119,8 @@ function skip() {
                 let object = JSON.parse(this.responseText);
                 if (object.status === "OK") {
                     messages.className = "successmessage";
+                    messages.innerHTML = "Skipped";
                     getquestion();
-                    messages.innerHTML = object.message;
                 }
                 else {
                     messages.className = "errormessage";
@@ -143,12 +143,12 @@ function submitanswer(url) {
             if (object.status === "OK") {
                 if (object.correct === true) {
                     messages.className = "successmessage";
-                    messages.innerHTML = "Well done";
+                    messages.innerHTML = "Well Done";
                     getquestion();
                 }
                 else {
-                    messages.className = "errormessages"
-                    messages.innerHTML = "Wrong answer";
+                    messages.className = "errormessage"
+                    messages.innerHTML = "Wrong Answer";
                 }
                 getscore();
             }
@@ -232,6 +232,12 @@ function getquestion() {
                 else {
                     document.getElementById("skipbutton").style.display = "none";
                 }
+                if (object.requiresLocation == true){
+                    locationmessages.innerHTML = "Location Required";
+                }
+                else {
+                    locationmessages.innerHTML = "";
+                }
                 if (questiontype == "BOOLEAN") {
                     document.getElementById("numberbox").style.display = "none";
                     document.getElementById("textbox").style.display = "none";
@@ -301,6 +307,7 @@ function displayQuestions() {
 function loginsubmit(){
     let v = document.getElementById("teamname").value;
     loginmessages.innerHTML = "";
+    document.getElementById("teamname").value = "";
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200){

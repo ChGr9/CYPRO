@@ -40,16 +40,22 @@ body{
     margin-top: 0;
     color: crimson;
     padding-top: 60px;
-    margin-bottom: -50px;
+    margin-bottom: -20px;
 }
 
 .successmessage{                                   /*Correct Answer GIVEN*/
     margin-top: 0;
     color: honeydew;
     padding-top: 60px;
-    margin-bottom: -50px;
+    margin-bottom: -20px;
 }
 
+.locationmessage{                                   /*Correct Answer GIVEN*/
+    margin-top: 0;
+    color: honeydew;
+    padding-top: 30px;
+    margin-bottom: -20px;
+}
 /*Team Name Error*/
 
 #exist{                                           /*Already exist Error*/

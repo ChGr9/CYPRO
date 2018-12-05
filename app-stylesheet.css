@@ -52,7 +52,7 @@ body{
 
 .locationmessage{                                   /*Correct Answer GIVEN*/
     margin-top: 0;
-    color: honeydew;
+    color: #00f1ff;
     padding-top: 30px;
     margin-bottom: -20px;
 }
@@ -383,6 +383,10 @@ header a:hover{
 }
 
 #questions {                                                         /*HIDDEN*/
+    display: none;
+}
+
+#QRreader {
     display: none;
 }
 /* Step 4 */

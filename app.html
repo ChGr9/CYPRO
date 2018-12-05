@@ -7,7 +7,7 @@
     <title>CYPRO</title>
     <link rel="icon" type="image/ico" href="LOGO.png" />
     <link rel="stylesheet" href="app-stylesheet.css" type="text/css">
-
+    <script src="instascan.js"></script>
 </head>
 <body>
 <header>
@@ -28,6 +28,11 @@
 </header>
 
 <section id="showcase">
+    <button onclick="QRreader()">button</button>
+    <div id="QRreader">
+        <video id="preview"></video>
+        <div style="margin: 20px; padding: 20px; background-color: black; color: white; text-align: center;" id="content"></div>
+    </div>
     <div class="container">
         <!---------------------------------Messages for Game STEP BY STEP------------------------------>
         <!--Points Box & CORRECT-ERROR Title-->

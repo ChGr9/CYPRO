@@ -171,6 +171,14 @@ function displaylogin(e){
     document.getElementById("welcome1").style.display = "none";
     document.getElementById("form2").style.display = "block";
     document.getElementById("welcome2").style.display = "block";
+    document.getElementById("back").style.display = "block";
+}
+
+function restart() {
+    if (confirm("Are you sure you want to restart the game?")) {
+        document.cookie = "";
+        location.reload();
+    }
 }
 
 function skip() {
@@ -328,7 +336,6 @@ function getquestion() {
                 }
             }
             else {
-
                 document.cookie = "";
                 messages.innerHTML = "";
                 document.getElementById("textbox").style.display = "none";
@@ -351,10 +358,12 @@ function getquestion() {
 function displayQuestions() {
     document.getElementById("form2").style.display = "none";
     document.getElementById("welcome2").style.display = "none";
+    document.getElementbyId("back").style.display = "none";
     document.getElementById("welcome3").style.display = "block";
     document.getElementById("questions").style.display = "block";
     document.getElementById("showpoints").style.display = "block";
     document.getElementById("skipbutton").style.display = "block";
+    document.getElementById("restart").style.display = "block"
     linkanswers();
 }
 

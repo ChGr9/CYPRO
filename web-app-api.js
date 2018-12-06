@@ -54,7 +54,10 @@ function QRreader() {
     });
     scanner.addListener('scan', function (content) {
         console.log(content);
-        document.getElementById("content").innerHTML = content;
+        let element = document.createElement("a");
+        element.innerHTML = content;
+        element.href = content;
+        document.getElementById("content").appendChild(element);
     });
 }
 

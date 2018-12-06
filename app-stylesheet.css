@@ -542,9 +542,10 @@ footer{
 
     .samples {
         padding-top: 10px;
+        overflow: hidden;
+        width: 42%;
         display: none;
-        margin-left: 24%;
-
+        margin-left: 28%;
     }
 
     #showcase .samples li {
@@ -573,7 +574,18 @@ footer{
         margin-left: 40px;
     }
 }
-@media(max-width: 373px) {
+
+@media (max-width: 495px) {
+    .samples {
+        padding-top: 10px;
+        overflow: hidden;
+        width: 55%;
+        display: none;
+        margin-left: 28%;
+    }
+}
+
+@media(max-width: 380px) {
     .container li, .container a {
         float: left;
         font-size: 13px;
@@ -582,10 +594,11 @@ footer{
     .samples {
         padding-top: 10px;
         overflow: hidden;
-        width: 67%;
+        width: 64%;
         display: none;
-        margin-left: 16%;
+        margin-left: 23%;
     }
+
     #showcase .samples li {
         padding: 3px 46px 2px 46px;
         margin-top: 20px;
@@ -602,5 +615,4 @@ footer{
     #form2{
         margin-left: 10px;
     }
-
 }

@@ -394,6 +394,14 @@ header a:hover{
 #QRreader {
     display: none;
 }
+
+#switchcamera {
+    display: none;
+}
+
+#stopqr {
+    display: none;
+}
 /* Step 4 */
 /*TEXT ANSWERS*/
 .container3{                                                         /*HIDDEN*/

@@ -70,20 +70,12 @@ var optsrear = {
     scanPeriod: 1
 };
 
-var scannerfront = new Instascan.Scanner(optsfront);
-var scannerrear = new Instascan.Scanner(optsrear);
-let scanner;
+var scanner = new Instascan.Scanner(optsfront);
 
 function QRreader() {
     document.getElementById("QRreader").style.display = "block";
     document.getElementById("startqr").style.display = "none";
     document.getElementById("stopqr").style.display = "block";
-    if (camera==0){
-        scanner = scannerfront;
-    }
-    else {
-        scanner = scannerrear;
-    }
     Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {
             scanner.start(cameras[camera]);
@@ -114,9 +106,11 @@ function switchcamera() {
     scanner.stop();
     if (camera == 0){
         camera = 1;
+        scanner = new Instascan.Scanner(optsrear);
     }
     else {
         camera = 0;
+        scanner = new Instascan.Scanner(optsfront);
     }
     QRreader();
 }

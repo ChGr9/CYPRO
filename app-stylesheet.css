@@ -124,8 +124,21 @@ input.button_1{
 }
 
 #back{
-    font-size:48px;color:red;
+    font-size:48px;color:red;                                 /* BACK BUTTON */
     display: none;
+}
+
+#restart{                                                    /* RESTART BUTTON */
+    font-size:48px;
+    color: red;
+    display: block;
+    margin-top: -10px;
+    padding-bottom: 90px;
+}
+
+.hrestart{
+    font-size: 18px;
+    color:red;
 }
 
 #bb1,#bb2,#bb3{

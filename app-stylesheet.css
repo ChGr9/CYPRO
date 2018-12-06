@@ -398,6 +398,10 @@ header a:hover{
 #stopqr {
     display: none;
 }
+
+#switchcamera {
+    display: none;
+}
 /* Step 4 */
 /*TEXT ANSWERS*/
 .container3{                                                         /*HIDDEN*/

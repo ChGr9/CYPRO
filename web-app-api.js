@@ -42,11 +42,12 @@ function QRreader() {
     document.getElementById("startqr").style.display = "none";
     document.getElementById("stopqr").style.display = "block";
     Instascan.Camera.getCameras().then(function (cameras) {
-        if (cameras.length > 0) {
+        if (cameras.length > 1) {
             scanner.start(cameras[1]);
-        } else {
-            console.error('No cameras found.');
-            alert("No cameras found.");
+        }
+        else {
+            console.error('No rear camera found.');
+            alert("No rear camera found.");
         }
     }).catch(function (e) {
         console.error(e);

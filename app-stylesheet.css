@@ -128,10 +128,10 @@ input.button_1{
     display: none;
 }
 
-#restart{                                                    /* RESTART BUTTON */
+#restart{
+    display: none;                                            /* RESTART BUTTON */
     font-size:48px;
     color: red;
-    display: block;
     margin-top: -10px;
     padding-bottom: 90px;
 }

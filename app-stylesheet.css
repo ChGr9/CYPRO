@@ -117,7 +117,11 @@ input.button_1{
     transition: opacity 0.2s ease;
     color: #000000;
     background: #ffffff;
+}
 
+#bb1,#bb2,#bb3{
+    font-size:24px;
+    padding: 1px 1px 1px 1px;
 }
 
 /*Activate Button*/
@@ -219,6 +223,7 @@ header a:hover{
     padding:30px;
     color:white;
     background:#35424a;
+    font-size: 12px;
 }
 
 #login h1{
@@ -316,9 +321,10 @@ header a:hover{
 .samples {                                                       /*HIDDEN*/
     padding-top: 10px;
     overflow: hidden;
-    width: 44%;
+    width: 42%;
     display: none;
     margin-left: 28%;
+
 }
 
 #showcase .samples li{
@@ -454,6 +460,33 @@ header a:hover{
 }
 
 /*-------------------------------------------------------------------------------------------------------------*/
+/* Share Section */
+
+.sharetitle{
+    margin: -35px 0 -13px 32px;
+}
+
+.hlinks{
+    color: aqua;
+    padding-left: 8px;
+}
+
+.share{
+  width: auto;
+}
+.facebook{
+    display: inline-block;
+    margin-left: 29%;
+}
+.twitter{
+    display: inline-block;
+    margin-left: 40px;
+}
+.github{
+    display: inline-block;
+    margin-left: 40px;
+}
+/*-------------------------------------------------------------------------------------------------------------*/
 
 footer{
     padding: 10px;
@@ -467,22 +500,25 @@ footer{
 
 /* Media Queries */
 
-@media(max-width: 777px){
-#boxes .box,header nav,header #branding{
-    float: none;
-    text-align: center;
-    width: 100%;
-}
-    .container li,.container a{
+@media(max-width: 780px) {
+    #boxes .box, header nav, header #branding {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container li, .container a {
         float: left;
         font-size: 14px;
     }
-    .container{
+
+    .container {
         width: 100%;
     }
-    #showcase{
+
+    #showcase {
         min-height: 400px;
-        background: url(DNA1.jpg)-2500px -719px;
+        background: url(DNA1.jpg) -2500px -719px;
         position: initial;
         background-size: 970%;
         text-align: center;
@@ -491,18 +527,18 @@ footer{
         padding: 10px;
     }
 
-    li{
+    li {
         padding-left: 60px;
         padding-right: 60px;
     }
 
     .samples {
         padding-top: 10px;
-        overflow: hidden;
-        width: 65%;
         display: none;
-        margin-left: 16%;
+        margin-left: 24%;
+
     }
+
     #showcase .samples li {
         padding: 5px 56px 5px 57px;
         margin-top: 20px;
@@ -516,6 +552,7 @@ footer{
         transition: 0.7s;
         text-transform: uppercase;
     }
+
     .ptitle {
         padding: 7px 32px 7px 12px;
         position: absolute;
@@ -523,8 +560,11 @@ footer{
         margin-top: -10px;
     }
 
+    .facebook {
+        display: inline-block;
+        margin-left: 40px;
+    }
 }
-
 @media(max-width: 373px) {
     .container li, .container a {
         float: left;

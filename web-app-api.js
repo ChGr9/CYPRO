@@ -1,4 +1,5 @@
 const apiurl = "https://codecyprus.org/th/api/";
+var camera = 0;
 
 function QRreader() {
     document.getElementById("QRreader").style.display = "block";
@@ -39,7 +40,7 @@ function QRreader() {
     var scanner = new Instascan.Scanner(opts);
     Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 0) {
-            scanner.start(cameras[0]);
+            scanner.start(cameras[camera]);
         } else {
             console.error('No cameras found.');
             alert("No cameras found.");
@@ -51,6 +52,16 @@ function QRreader() {
         console.log(content);
         document.getElementById("content").innerHTML = content;
     });
+}
+
+function switchcamera() {
+    if (camera == 0){
+        camera = 1;
+    }
+    else {
+        camera = 0;
+    }
+    QRreader();
 }
 
 function emptyLeaderboard() {

@@ -29,8 +29,8 @@
 </header>
 
 <section id="showcase">
-    <button id="startqr" onclick="QRreader()">QR CODE</button>
-    <button id="stopqr" onclick="QRstop()">Stop</button>
+    <button class="start" id="startqr" onclick="QRreader()">QR CODE</button>
+    <button class="close" id="stopqr" onclick="QRstop()">HIDE</button>
     <div id="QRreader">
         <video id="preview"></video>
         <div style="margin: 20px; padding: 20px; background-color: black; color: white; text-align: center;" id="content"></div>
@@ -70,6 +70,8 @@
         <div id="exist">
             <h2 id="loginmessages"></h2>
         </div>
+        <br>
+        <i id="back" class="fa fa-chevron-circle-left" onclick="location.href='app.html'"></i>
     </div>
         <!--Step 3-->
         <!--CHOOSE A,B,C,D BUTTONS-->
@@ -140,15 +142,15 @@
     </div>
     <div class="facebook">
     <h2>Facebook</h2>
-    <button id="bb1"><a href=""> </a>Share <i class="fa fa-facebook-square"></i></button>
+    <button id="bb1"><a href="https://www.facebook.com/CYPRO-2105798099442925/?modal=admin_todo_tour"> </a>Share <i class="fa fa-facebook-square"></i></button>
     </div>
     <div class="twitter">
         <h2>Twitter</h2>
-        <button id="bb2"><a href=""> </a>Share <i class="fa fa-twitter"></i></button>
+        <button id="bb2"><a href="https://twitter.com/CYPRO61572570"></a>Share <i class="fa fa-twitter"></i></button>
     </div>
     <div class="github">
         <h2>GitHub</h2>
-        <button id="bb3"><a href=""> </a>Share <i class="fa fa-github"></i></button>
+        <button id="bb3"><a href="https://github.com/"> </a>Share <i class="fa fa-github"></i></button>
     </div>
 </section>
 

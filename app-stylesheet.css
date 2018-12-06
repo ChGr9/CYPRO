@@ -34,6 +34,10 @@ body{
     margin-top: 0;
 }
 
+.start,.close{
+    float: right;
+}
+
 /*GAME MESSAGES--WRONG & CORRECT*/
 
 .errormessage{                                     /*Wrong Answer GIVEN*/
@@ -119,9 +123,14 @@ input.button_1{
     background: #ffffff;
 }
 
+#back{
+    font-size:48px;color:red
+}
+
 #bb1,#bb2,#bb3{
     font-size:24px;
     padding: 1px 1px 1px 1px;
+    display: none;
 }
 
 /*Activate Button*/

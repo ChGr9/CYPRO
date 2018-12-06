@@ -124,13 +124,14 @@ input.button_1{
 }
 
 #back{
-    font-size:48px;color:red
+    font-size:48px;color:red;
+    display: none;
 }
 
 #bb1,#bb2,#bb3{
     font-size:24px;
     padding: 1px 1px 1px 1px;
-    display: none;
+
 }
 
 /*Activate Button*/

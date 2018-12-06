@@ -35,6 +35,8 @@ var opts = {
     // Default 1 (i.e. analyze every frame).
     scanPeriod: 1
 };
+
+
 var scanner = new Instascan.Scanner(opts);
 
 function QRreader() {
@@ -358,12 +360,12 @@ function getquestion() {
 function displayQuestions() {
     document.getElementById("form2").style.display = "none";
     document.getElementById("welcome2").style.display = "none";
-    document.getElementbyId("back").style.display = "none";
+    document.getElementById("back").style.display = "none";
     document.getElementById("welcome3").style.display = "block";
     document.getElementById("questions").style.display = "block";
     document.getElementById("showpoints").style.display = "block";
     document.getElementById("skipbutton").style.display = "block";
-    document.getElementById("restart").style.display = "block"
+    document.getElementById("restart").style.display = "block";
     linkanswers();
 }
 

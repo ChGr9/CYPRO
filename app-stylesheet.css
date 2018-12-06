@@ -427,7 +427,7 @@ header a:hover{
 }
 
 #restart {
-    display = none;
+    display: none;
 }
 
 /* Step 4 */

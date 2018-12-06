@@ -122,9 +122,7 @@ input.button_1{
 
 /*Activate Button*/
 
-.activate{
-    padding: 5px 47px 5px 48px;
-}
+
 
 #teamname{
     padding:2px 0 3px 0;
@@ -217,7 +215,7 @@ header a:hover{
     padding-top: 10px;
 }
 
-#login{
+#share{
     padding:30px;
     color:white;
     background:#35424a;
@@ -314,6 +312,7 @@ header a:hover{
 
 /* STEP 1 OPTIONS*/
 /*Choose Samples*/
+
 .samples {                                                       /*HIDDEN*/
     padding-top: 10px;
     overflow: hidden;
@@ -491,20 +490,26 @@ footer{
         transition: 10s;
         padding: 10px;
     }
+
+    li{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
     .samples {
         padding-top: 10px;
         overflow: hidden;
-        width: 67%;
+        width: 65%;
         display: none;
         margin-left: 16%;
     }
     #showcase .samples li {
-        padding: 3px 10px 2px 10px;
+        padding: 5px 56px 5px 57px;
         margin-top: 20px;
         color: #ffffff;
         background-color: #35424a;
         font-weight: bold;
-        font-size: 17px;
+        font-size: 15px;
         text-decoration: none;
         border: 2px solid #e8491d;
         list-style-type: none;
@@ -534,7 +539,7 @@ footer{
         margin-left: 16%;
     }
     #showcase .samples li {
-        padding: 3px 10px 2px 10px;
+        padding: 3px 46px 2px 46px;
         margin-top: 20px;
         color: #ffffff;
         background-color: #35424a;

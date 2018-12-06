@@ -36,6 +36,11 @@ button:hover {
     border-color: #35424a;
 }
 
+#bb1,#bb2,#bb3{
+    font-size:24px;
+    padding: 1px 1px 1px 1px;
+}
+
 /*Activate Button*/
 
 .activate{
@@ -130,6 +135,14 @@ margin-top:100px;
     margin-bottom: 10px;
     color: #ffffff;
 }
+
+#share {
+    padding: 30px;
+    color: white;
+    background: #35424a;
+    font-size: 12px;
+}
+
 #showcase p{
     font-size: 18px;
     padding-top: 10px;
@@ -175,6 +188,34 @@ margin-top:100px;
 #boxes .box img{
     width:90px;
 }
+/*-------------------------------------------------------------------------------------------------------------*/
+/* Share Section */
+
+.sharetitle{
+    margin: -35px 0 -13px 32px;
+}
+
+.hlinks{
+    color: aqua;
+    padding-left: 8px;
+}
+
+.share{
+    width: auto;
+}
+.facebook{
+    display: inline-block;
+    margin-left: 29%;
+}
+.twitter{
+    display: inline-block;
+    margin-left: 40px;
+}
+.github{
+    display: inline-block;
+    margin-left: 40px;
+}
+/*-------------------------------------------------------------------------------------------------------------*/
 
 footer{
     padding: 10px;
@@ -207,6 +248,10 @@ footer{
         text-align: center;
         color: #ffffff;
         transition: 10s;
+    }
+    .facebook {
+        display: inline-block;
+        margin-left: 40px;
     }
 }
 @media(max-width: 373px) {

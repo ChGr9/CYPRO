@@ -45,7 +45,7 @@ function QRreader() {
     document.getElementById("stopqr").style.display = "block";
     Instascan.Camera.getCameras().then(function (cameras) {
         if (cameras.length > 1) {
-            scanner.start(cameras[1]);
+            scanner.start(cameras[0]);
         }
         else {
             console.error('No rear camera found.');
